@@ -4252,15 +4252,20 @@ span.icon-bar {
         text-decoration-style: solid;
         background-size: 32px;
         height: auto !important; }
+        #navigation #main-menu > ul > li a .fa {
+          float: right; }
       #navigation #main-menu > ul > li:hover > ul {
         display: block; }
       #navigation #main-menu > ul > li > ul {
         background-color: #f9f9f9;
         display: none;
-        width: 300px;
+        width: 00px;
         position: absolute;
         top: 0px;
+        height: 100%;
         left: 100%; }
+        #navigation #main-menu > ul > li > ul > li a {
+          background-size: 222px; }
       #navigation #main-menu > ul > li.mega > ul {
         width: 400px; }
         #navigation #main-menu > ul > li.mega > ul > li {

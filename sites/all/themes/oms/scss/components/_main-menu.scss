@@ -34,6 +34,9 @@
           text-decoration-style: solid;
           background-size: 32px;
           height: auto !important;
+          .fa{
+            float: right;
+          }
         }
         &:hover{
           &>ul{
@@ -44,12 +47,16 @@
         &>ul{
           background-color: $color6;
           display: none;
-          width: 300px;
+          width: 00px;
           position: absolute;
           top: 0px;
+          height: 100%;
           left: 100%;
           &>li{
 
+            a{
+              background-size: 222px;
+            }
           }
         }
         &.mega{
