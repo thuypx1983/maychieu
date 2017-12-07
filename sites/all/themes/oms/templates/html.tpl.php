@@ -36,5 +36,6 @@
           fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));</script>
   <!-- !facebook comment -->
+  <script type="text/javascript" src="/sites/all/themes/oms/js/pushy/js/pushy.js"></script>
 </body>
 </html>

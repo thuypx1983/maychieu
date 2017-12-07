@@ -7,7 +7,6 @@ stylesheets[all][] = js/pushy/css/pushy.css
 stylesheets[all][] = js/magnific-popup/magnific-popup.css
 scripts[] = js/magnific-popup/jquery.magnific-popup.js
 scripts[] = js/slick.min.js
-scripts[] = js/pushy/js/pushy.min.js
 scripts[] = js/overwrites.js
 scripts[] = js/scripts.js
 
