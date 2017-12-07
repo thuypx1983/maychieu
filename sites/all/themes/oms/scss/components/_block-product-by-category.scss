@@ -1,0 +1,74 @@
+.grid-product{
+  .views-field-title{
+    h3{
+      font-size: 15px;
+      text-align: center;
+      margin: 0px;
+    }
+  }
+  .views-field-sell-price{
+    padding-top: 10px;
+    text-align: center;
+    .uc-price{
+      color: $color1_1;
+      font-weight: bold;
+    }
+  }
+}
+.block-product-by-category{
+  position: relative;
+  margin-top: 50px;
+  .views-row{
+    margin-bottom: 30px;
+  }
+  .title{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: block;
+    border-bottom: 1px solid $color1;
+    padding-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+    &:before{
+      display: block;
+      position: absolute;
+      left: 0px;
+      content: "";
+      width: 10px;
+      height: 100%;
+      background-color: $color1;
+    }
+  }
+  .sub-category{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    span{
+      font-size: 14px;
+    }
+    ul{
+      margin: 0px;
+      padding-left: 5px;
+      display: inline-block;
+      li{
+        list-style: none;
+        display: inline-block;
+        h2{
+          font-size: 16px;
+          margin: 0px;
+          border-right: 1px solid $color8;
+          padding-left: 5px;
+          padding-right: 5px;
+
+        }
+        &:last-child{
+          h2{
+            border-right:none;
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.block-search{
+  border-right: 1px solid $color2;
+  height: 56px;
+  position: relative;
+  .fa{
+    line-height: 56px;
+    cursor: pointer;
+  }
+  .content{
+    margin-top: 10px;
+    padding-left: 10px;
+    width: 350px;
+    display: none;
+    position: absolute;
+    right: calc(100% + 15px);
+    top: 0px;
+    z-index: 9999;
+    background-color: $color3;
+    .container-inline{
+      display: table;
+      width: 100%;
+      &>div{
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+  .form-submit{
+    background: $color4 none repeat scroll 0 0;
+    background-image: none;
+    border: none;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 0px;
+    width: 100%;
+    font-size: 12px;
+    font-style: italic;
+    color: $color1;
+    &:hover{
+      background: $color4 none repeat scroll 0 0;
+    }
+  }
+}
+.form-submit{
+
+  background: $color4 none repeat scroll 0 0;
+  background-image: none;
+  border: none;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  width: 100%;
+}
+.form-text {
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+}
+@include bp(max-width,$bp-tablet) {
+  .block-search .content{
+    position: fixed;
+    width: 100%;
+  }
+}

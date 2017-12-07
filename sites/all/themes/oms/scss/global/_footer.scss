@@ -1,0 +1,35 @@
+.footer {
+  background-color: $color9;
+  border-top: 1px solid #ccc;
+  clear: both;
+  padding-top: 30px;
+  width: 100%;
+  margin-top: 65px;
+}
+.footer-address{
+  p{
+    font-size: 12px;
+  }
+}
+
+.footer-block{
+  ul{
+    padding-left: 0px;
+    li{
+      list-style: none;
+    }
+  }
+  .title{
+    color: $color1;
+    font-weight: bold;
+  }
+}
+.head.social{
+  ul{
+    li{
+      list-style: none;
+      display: inline-block;
+
+    }
+  }
+}

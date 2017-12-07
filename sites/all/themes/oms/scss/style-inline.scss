@@ -1,0 +1,26 @@
+
+@import "fonts";
+@import "font-awesome";
+/* Variables */
+@import "vars";
+
+/* Mixin */
+@import "mixin";
+
+/*global*/
+@import "global/grid";
+@import "global/general";
+@import "global/header";
+
+/*components*/
+@import "components/slick";
+@import "components/block-cart";
+@import "components/block-menu-user";
+@import "components/block-top-phone";
+@import "components/block-search";
+@import "components/main-menu";
+@import "components/block-banner-main";
+@import "components/block-set-feature";
+@import "components/block-featured-product";
+@import "components/block-testimonials";
+

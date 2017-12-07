@@ -1,0 +1,206 @@
+<?php
+
+/**
+ * Implements hook_node_view().
+ *
+ * Adds a Facebook like button to page nodes.
+ */
+function product_extend_node_view($node, $view_mode, $langcode) {
+  $node->content['social_buttons'] = array(
+    '#type' => 'item',
+    '#title' => '',
+    '#markup' =>  theme('social_buttons', array(
+      'node' => null)),
+    '#attributes' => array('class' => array('social-buttons')),
+  );
+  switch ($node->type) {
+
+    case 'set_product':
+      $node->content['news_title'] = array(
+        '#type' => 'item',
+        '#title' => '',
+        '#markup' =>  '<h1 class="content-title">'.$node->title.'</h1>',
+        '#attributes' => array('class' => array('news-title')),
+      );
+      $node->content['created'] = array(
+        '#type' => 'item',
+        '#title' => '',
+        '#markup' =>  '<span class="created">'.format_date($node->created).'</span>',
+        '#attributes' => array('class' => array('created')),
+      );
+      $node->content['btn_send_request'] = array(
+        '#type' => 'item',
+        '#title' => '',
+        '#markup' =>  '<span class="btn-send-request"><a class="ctools-use-modal ctools-modal-modal-popup-medium" href="/modal_forms/nojs/webform/27">'.t('Hẹn gặp thiết kế').'</a></span>',
+        '#attributes' => array('class' => array('btn-send-request')),
+      );
+      $block = block_load('block', 7);
+      $block=_block_get_renderable_array(_block_render_blocks(array($block)));
+      $output = drupal_render($block);
+
+      $node->content['block_design_process'] = array(
+        '#type' => 'item',
+        '#title' => '',
+        '#markup' =>  '<div class="div-design-process">'.$output.'</div>',
+        '#attributes' => array('class' => array('btn-send-request')),
+      );
+      //
+      break;
+    case 'product':
+    case 'job':
+    case 'article':
+      $node->content['news_title'] = array(
+        '#type' => 'item',
+        '#title' => '',
+        '#markup' =>  '<h1 class="content-title">'.$node->title.'</h1>',
+        '#attributes' => array('class' => array('news-title')),
+      );
+      $node->content['created'] = array(
+        '#type' => 'item',
+        '#title' => '',
+        '#markup' =>  '<span class="created">'.format_date($node->created).'</span>',
+        '#attributes' => array('class' => array('created')),
+      );
+      break;
+    default:
+      break;
+  }
+}
+
+
+/**
+ * Implements hook_field_extra_fields().
+ *
+ * Declare our Facebook Like button as a pseudo-field.
+ */
+function product_extend_field_extra_fields() {
+
+  $extra['node']['product']['display'] = array(
+    'news_title' => array(
+      'label' => t('Title'),
+      'description' => t('Title.'),
+      'weight' => 1,
+    ),
+    'created' => array(
+      'label' => t('Created date'),
+      'description' => t('created date.'),
+      'weight' => 1,
+    ) ,
+    'social_buttons' => array(
+      'label' => t('social_buttons'),
+      'description' => t('social_buttons'),
+      'weight' => 1,
+    )
+  );
+
+  $extra['node']['article']['display'] = array(
+    'news_title' => array(
+      'label' => t('Title'),
+      'description' => t('Title.'),
+      'weight' => 1,
+    ),
+    'created' => array(
+      'label' => t('Created date'),
+      'description' => t('created date.'),
+      'weight' => 1,
+    ) ,
+    'social_buttons' => array(
+      'label' => t('social_buttons'),
+      'description' => t('social_buttons'),
+      'weight' => 1,
+    )
+  );
+
+
+  $extra['node']['set_product']['display'] = array(
+    'news_title' => array(
+      'label' => t('Title'),
+      'description' => t('Title.'),
+      'weight' => 1,
+    ),
+    'created' => array(
+      'label' => t('Created date'),
+      'description' => t('created date.'),
+      'weight' => 1,
+    ) ,
+    'social_buttons' => array(
+      'label' => t('social_buttons'),
+      'description' => t('social_buttons'),
+      'weight' => 1,
+    ),
+    'btn_send_request' => array(
+      'label' => t('Button sent request'),
+      'description' => t('Button sent request for buying a set product'),
+      'weight' => 1,
+    ),
+    'block_design_process' => array(
+      'label' => t('Design processing'),
+      'description' => t('Design processing'),
+      'weight' => 1,
+    )
+  );
+  $extra['node']['page']['display'] = array(
+    'social_buttons' => array(
+      'label' => t('social_buttons'),
+      'description' => t('social_buttons'),
+      'weight' => 1,
+    )
+  );
+
+  return $extra;
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function product_extend_theme() {
+  return array(
+    'social_buttons' => array(
+      'variables' => array(
+        'node' => NULL,
+      ),
+      'template' => 'templates/social-buttons',
+    ),
+  );
+}
+
+function product_extend_form_alter(&$form, &$form_state, $form_id){
+  //if it is the exposed filter view
+  if (($form_id == 'views_exposed_form') &&
+    //for the view we care about
+    ($form_state['view']->name == 'products_list') &&
+    //and the view display we care about
+    ($form_state['view']->current_display == 'page_1') &&
+    //and on a taxonomy term page
+    (arg(0)=='taxonomy') && (arg(1)=='term') && (is_numeric(arg(2)))){
+    //get the childern of the term
+    if ($child_terms = taxonomy_get_children(arg(2))){
+      //only care about the tids
+      $child_terms_tids = array();
+      foreach ($child_terms as $child){
+        $child_terms_tids[] = $child->tid;
+      }
+      if(count($child_terms_tids)==0){
+        unset($form['taxonomy_catalog_tid']);
+      }else{
+        //for the exposed filter, alter the available options
+        foreach ($form['taxonomy_catalog_tid']['#options'] as $key => $term){
+          //is is a child term?
+          if(is_object($term)){
+            if($term->option){
+              $keys=array_keys($term->option);
+              $tid=$keys[0];
+              if (!in_array($tid,$child_terms_tids)){
+                unset($form['taxonomy_catalog_tid']['#options'][$key]);
+              }
+            }
+
+          }
+
+        }
+      }
+
+    }
+  }
+}
