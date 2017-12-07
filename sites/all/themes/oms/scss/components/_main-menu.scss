@@ -1,4 +1,7 @@
 #navigation{
+  border-left:solid 1px #d8d8d8;
+  border-right:solid 1px #d8d8d8;
+  border-bottom:solid 1px #d8d8d8;
   #main-menu{
     ul{
       z-index: 9999;
@@ -7,14 +10,11 @@
       }
     }
     &>ul{
-      display: table;
       width: 100%;
       padding-bottom: 0px;
       margin-bottom: 0px;
-      text-align: center;
       &>li{
-        display: inline-block;
-        float: left;
+        display: block;
         color: $color5;
         font-weight: 500;
         position: relative;
@@ -76,7 +76,7 @@
       position: relative;
       a{
         color: $color3;
-        display: inline-block;
+        display: block;
       }
       .fa{
         position: absolute;

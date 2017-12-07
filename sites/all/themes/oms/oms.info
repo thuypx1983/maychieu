@@ -13,6 +13,7 @@ scripts[] = js/scripts.js
 regions[sidebar_first]  = Sidebar left
 regions[sidebar_second]  = Sidebar right
 regions[header_top]         = Header top
+regions[header_middle]         = Header middle
 regions[header]         = Header
 regions[home_banner]     = Home Banner
 regions[home_high1]     = Home Highlight 1

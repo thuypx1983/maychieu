@@ -1,15 +1,20 @@
 .block-uc-cart{
+  background-color: #359131;
   height: 56px;
   position: relative;
   position: relative;
   padding: 0px;
   .title{
+    display: table;
+    width: 100%;
+    height:56px;
     a{
-      display: block;
+      display: table-cell;
       text-align: center;
+      vertical-align: middle;
       .fa{
         color: $color3;
-        font-size: 18px;
+        font-size: 22px;
       }
 
     }
@@ -17,8 +22,9 @@
       font-size: 14px;
       font-weight: 500;
       padding-right: 0px;
-      text-align: center;
-      display: block;
+      text-align: left;
+      display: table-cell;
+      vertical-align: middle;
       color: $color3;
       .cart-block-arrow{
         display: none;
@@ -35,7 +41,7 @@
     border: 1px solid $color2;
     background-color: white;
     width: 320px;
-
+    z-index: 100;
     position: absolute;
     right: 0px;
     top: 100%;

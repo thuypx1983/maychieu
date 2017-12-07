@@ -1,10 +1,8 @@
 header{
-  .container-top{
-    width: 980px;
-  }
+
 }
 #header-top{
-  background-color: $color1;
+  background-color: $color5;
   height: 56px;
   i{
     color: $color3;
@@ -21,6 +19,44 @@ header{
   }
 }
 
+span.icon-bar{
+  display: block;
+  height: 4px;
+  background-color: $color3;
+  width: 30px;
+  margin-top: 8px;
+}
+#header-bottom{
+  background-color: $color1;
+  .desktop-menu{
+  }
+  .menu-category-button{
+    display: table;
+    width: 100%;
+    background-color: #359131;
+    height: 56px;
+    .icon-menu-category{
+      display: table-cell;
+      vertical-align: middle;
+      padding: 10px;
+    }
+    .text-menu-category{
+      display: table-cell;
+      vertical-align: middle;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+  span.icon-bar{
+    margin-top: 5px;
+    width: 22px;
+    height: 3px;
+  }
+  span.icon-bar:first-child{
+    margin-top: 0px;
+  }
+}
 
 @include bp(max-width,$bp-tablet){
   #header-top .block-logo a {
@@ -28,76 +64,6 @@ header{
     img{
       margin-top: 0px;
       max-height: 40px;
-    }
-  }
-  header{
-    .container-top{
-      width: 100%;
-    }
-  }
-  .container-top{
-    .row{
-      margin: 0px;
-      display: table;
-      width: 100%;
-      .button-mobile{
-        display: table-cell;
-        text-align: left;
-        width: 50px;
-        vertical-align: middle;
-        .menu-btn{
-          float: none;
-        }
-      }
-      .top-left{
-        display: table-cell;
-        .region-header-top{
-          display: table;
-          width: 100%;
-          &>div{
-            display: table-cell;
-            padding: 0px;
-          }
-          .fa{
-            font-size: 20px;
-          }
-          #block-search-form{
-            width: 50px;
-          }
-          #block-system-user-menu{
-            width: 50px;
-            display: none;
-          }
-          #block-uc-cart-cart{
-            width: 50px;
-            height: auto;
-            .cart-block-title-bar{
-              display: none;
-            }
-          }
-          .block-logo{
-            text-align: center;
-            padding-left: 10px;
-            padding-right: 10px;
-          }
-          p,a,img{
-            padding: 0px;
-            margin: 0px;
-          }
-        }
-      }
-    }
-  }
-  .menu-btn{
-    display: inline-block;
-    float: right;
-    span.icon-bar{
-      display: block;
-      height: 4px;
-      background-color: $color3;
-      width: 30px;
-      margin-top: 8px;
-      border-radius: 2px;
     }
   }
 }

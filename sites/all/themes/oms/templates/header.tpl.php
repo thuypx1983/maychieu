@@ -19,7 +19,8 @@
   <div id="header">
     <div class="container container-top">
       <div class="hidden-sm hidden-xs">
-        <nav id="navigation" class="clearfix" role="navigation">
+          <!-- start main-menu -->
+          <nav id="navigation" class="clearfix" role="navigation">
           <div id="main-menu">
             <?php
             if (module_exists('i18n_menu')) {
@@ -32,11 +33,11 @@
           </div>
         </nav><!-- end main-menu -->
       </div>
+      <?php print render($page['header']); ?>
     </div>
   </div>
 </header>
 
-<?php print render($page['header']); ?>
 
 <?php print $messages; ?>
 <div class="clearfix"></div>

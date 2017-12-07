@@ -145,7 +145,7 @@
 
     $(document).ready(function(){
 
-        $('.block-search .fa-search').click(function () {
+       /* $('.block-search .fa-search').click(function () {
             $('.block-search .content').show();
         })
         $(document).on("click",function (event) {
@@ -153,7 +153,7 @@
                 $('.block-search .content').hide();
 
             }
-        })
+        })*/
         STNScript.initSlick();
         STNScript.testimonialsEffect();
         STNScript.createMenuMobile();

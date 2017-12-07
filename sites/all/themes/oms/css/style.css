@@ -54,7 +54,7 @@
     text-transform: uppercase;
     margin-bottom: 30px;
     display: block;
-    border-bottom: 1px solid #0ca63a;
+    border-bottom: 1px solid #3eaa3a;
     padding-bottom: 5px;
     position: relative;
     padding-left: 15px; }
@@ -65,7 +65,7 @@
       content: "";
       width: 10px;
       height: 100%;
-      background-color: #0ca63a; }
+      background-color: #3eaa3a; }
   .block-product-by-category .sub-category {
     position: absolute;
     top: 0px;
@@ -106,7 +106,7 @@
   .footer-block ul li {
     list-style: none; }
 .footer-block .title {
-  color: #0ca63a;
+  color: #3eaa3a;
   font-weight: bold; }
 
 .head.social ul li {
@@ -141,7 +141,7 @@ body.views--set-products--page-2 .view-set-products .views-row {
       position: absolute;
       bottom: 0px;
       text-align: center;
-      background-color: #0ca63a;
+      background-color: #3eaa3a;
       width: 100%;
       overflow: hidden;
       transition: height 1s ease 0s; }
@@ -325,8 +325,8 @@ body.views--products-list--page-1 .ajax-progress {
 .view-collection .views-field-view-node a {
   margin-top: 20px;
   background-color: transparent;
-  color: #0ca63a !important;
-  border: 1px solid #0ca63a;
+  color: #3eaa3a !important;
+  border: 1px solid #3eaa3a;
   padding: 15px 20px;
   display: inline-block; }
 .view-collection .views-field-sell-price {
