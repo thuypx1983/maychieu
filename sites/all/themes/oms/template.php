@@ -208,3 +208,24 @@ function oms_uc_cart_view_form($variables) {
 
   return $output;
 }
+/**
+ * place in your theme's template.php file, replacing YOURTHEME with your theme's name
+ * Implements theme_menu_link()
+ */
+function oms_menu_link($link) {
+  $element = &$link['element'];
+
+  if(isset($element['#localized_options'][''])){
+
+    $pattern = '/\S+\.(png|gif|jpg)\b/i';
+    if (preg_match($pattern, $element['#title'], $matches) > 0) {
+      $element['#title'] = preg_replace($pattern,
+        '<img alt = "' . $element['#localized_options']['attributes']['title'] . '" src = "' . url($matches[0]) . '" />',
+        $element['#title']);
+      $element['#localized_options']['html'] = TRUE;
+    }
+  }
+
+
+  return theme_menu_link($link);
+}

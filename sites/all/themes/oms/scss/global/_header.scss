@@ -3,7 +3,6 @@ header{
 }
 #header-top{
   background-color: $color5;
-  height: 56px;
   i{
     color: $color3;
   }
@@ -34,7 +33,7 @@ span.icon-bar{
     display: table;
     width: 100%;
     background-color: #359131;
-    height: 56px;
+    height: 50px;
     .icon-menu-category{
       display: table-cell;
       vertical-align: middle;

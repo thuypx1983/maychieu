@@ -3755,8 +3755,7 @@ ul.menu {
     border: 1px solid #dfdfdf; }
 
 #header-top {
-  background-color: #2b2b2b;
-  height: 56px; }
+  background-color: #2b2b2b; }
   #header-top i {
     color: #ffffff; }
   #header-top .block-logo a {
@@ -3779,7 +3778,7 @@ span.icon-bar {
     display: table;
     width: 100%;
     background-color: #359131;
-    height: 56px; }
+    height: 50px; }
     #header-bottom .menu-category-button .icon-menu-category {
       display: table-cell;
       vertical-align: middle;
@@ -4082,14 +4081,14 @@ span.icon-bar {
 
 .block-uc-cart {
   background-color: #359131;
-  height: 56px;
+  height: 50px;
   position: relative;
   position: relative;
   padding: 0px; }
   .block-uc-cart .title {
     display: table;
     width: 100%;
-    height: 56px; }
+    height: 50px; }
     .block-uc-cart .title a {
       display: table-cell;
       text-align: center;
@@ -4135,10 +4134,7 @@ span.icon-bar {
 .block-menu-user {
   cursor: pointer;
   position: relative;
-  border-right: 1px solid #e8e8e8;
-  height: 56px; }
-  .block-menu-user .fa {
-    line-height: 56px; }
+  border-right: 1px solid #e8e8e8; }
   .block-menu-user .content {
     display: none;
     border-bottom: 1px solid #e8e8e8;
@@ -4158,15 +4154,12 @@ span.icon-bar {
     display: block; }
 
 .block-top-phone {
-  border-right: 1px solid #e8e8e8;
-  height: 56px; }
+  border-right: 1px solid #e8e8e8; }
   .block-top-phone .content {
     color: #ffffff; }
-    .block-top-phone .content .fa {
-      line-height: 56px; }
 
 .block-search {
-  height: 56px;
+  height: 50px;
   position: relative; }
   .block-search .content {
     margin-top: 10px;
@@ -4237,23 +4230,28 @@ span.icon-bar {
   #navigation #main-menu > ul {
     width: 100%;
     padding-bottom: 0px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    margin-top: 0px;
+    position: relative; }
     #navigation #main-menu > ul > li {
       display: block;
       color: #2b2b2b;
       font-weight: 500;
-      position: relative; }
+      border-bottom: solid 1px #d8d8d8;
+      margin-left: 0px; }
       #navigation #main-menu > ul > li a {
         color: #2b2b2b;
-        display: inline-block;
+        display: block;
         font-weight: 500;
-        padding-bottom: 17px;
-        padding-left: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
         padding-right: 10px;
-        padding-top: 15px;
+        padding-top: 10px;
         text-decoration-color: currentcolor;
         text-decoration-line: none;
-        text-decoration-style: solid; }
+        text-decoration-style: solid;
+        background-size: 32px;
+        height: auto !important; }
       #navigation #main-menu > ul > li:hover > ul {
         display: block; }
       #navigation #main-menu > ul > li > ul {
@@ -4261,8 +4259,8 @@ span.icon-bar {
         display: none;
         width: 300px;
         position: absolute;
-        top: 100%;
-        left: 0px; }
+        top: 0px;
+        left: 100%; }
       #navigation #main-menu > ul > li.mega > ul {
         width: 400px; }
         #navigation #main-menu > ul > li.mega > ul > li {
