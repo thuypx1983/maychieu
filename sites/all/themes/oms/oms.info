@@ -18,10 +18,13 @@ regions[header]         = Header
 regions[home_banner]     = Home Banner
 regions[home_high1]     = Home Highlight 1
 regions[home_high2]     = Home Highlight 2
-regions[home_high3_column1]     = home_high3_column1
-regions[home_high3_column2]     = home_high3_column2
-regions[home_high3_column3]     = home_high3_column3
-regions[home_high3_column4]     = home_high3_column4
+regions[banner_home_1]     = banner_home_1
+regions[home_high3_left]     = Home Highlight 3 left
+regions[home_high3_right]     = Home Highlight 3 right
+regions[banner_home_2]     = banner_home_2
+
+regions[home_high4_left]     = Home Highlight 4 left
+regions[home_high4_right]     = Home Highlight 4 right
 regions[content_top]    = Content Top
 regions[content]        = Content
 regions[banner_top_content]        = banner_top_content

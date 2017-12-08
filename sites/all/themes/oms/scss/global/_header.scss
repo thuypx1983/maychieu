@@ -2,19 +2,14 @@ header{
 
 }
 #header-top{
+  padding: 8px 0px;
   background-color: $color5;
   i{
     color: $color3;
   }
-  .block-logo{
-    a{
-      display: inline-block;
-      position: relative;
-      width: 60%;
-      img{
-        margin-top: 6px;
-      }
-    }
+  p{
+    padding: 0px;
+    margin: 0px;
   }
 }
 
@@ -55,6 +50,9 @@ span.icon-bar{
   span.icon-bar:first-child{
     margin-top: 0px;
   }
+}
+.top-left{
+
 }
 
 @include bp(max-width,$bp-tablet){

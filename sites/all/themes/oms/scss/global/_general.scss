@@ -23,7 +23,6 @@ ul.menu{
   }
 }
 .row-content{
-  border: 1px solid $color3;
   height: 100%;
   padding: 10px 5px;
   &:hover{
@@ -31,5 +30,30 @@ ul.menu{
     -webkit-box-shadow: 3px 3px 4px 0 rgba(89,89,89,0.2);
     -moz-box-shadow: 3px 3px 4px 0 rgba(89,89,89,0.2);
     border: 1px solid $color4;
+  }
+}
+.product-items{
+  .product-item{
+    margin-bottom: 10px;
+    .row-content{
+      border: 1px solid $color9;
+    }
+    .views-field-sell-price {
+      margin-bottom: 5px;
+      .uc-price{
+        font-weight: bold;
+        color: #ff4200;
+        font-size: 18px;
+      }
+    }
+    .views-field-title{
+      margin-bottom: 10px;
+      a {
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+        font-weight: bold;
+      }
+    }
   }
 }

@@ -73,6 +73,22 @@
     }
   }
 }
+.menu-category-button{
+  position: relative;
+  &:hover{
+    .popup-menu{
+      display: block;
+    }
+  }
+  .popup-menu{
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 100;
+  }
+}
 
 @include bp(max-width,$bp-tablet) {
   #main-menu .menu a.active-trail{

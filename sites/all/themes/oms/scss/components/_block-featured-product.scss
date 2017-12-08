@@ -39,17 +39,21 @@
     }
   }
   .views-row{
-
+    .row-content{
+      border: 1px solid $color9;
+    }
     .views-field-title{
       a{
         text-transform: uppercase;
         display: block;
-        text-align: left;
+        text-align: center;
         padding-top: 20px;
         text-transform: lowercase;
+        font-weight: bold;
         &:first-letter {
           text-transform: uppercase;
         }
+
       }
     }
     .views-field-sell-price{
@@ -57,6 +61,7 @@
       .uc-price{
         font-weight: bold;
         color: $color1_1;
+        font-size: 22px;
       }
 
     }
