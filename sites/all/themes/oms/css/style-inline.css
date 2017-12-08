@@ -3758,14 +3758,17 @@ ul.menu {
   .product-items .product-item .row-content {
     border: 1px solid #ebebeb; }
   .product-items .product-item .views-field-sell-price {
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ff4200;
+    font-size: 18px; }
     .product-items .product-item .views-field-sell-price .uc-price {
       font-weight: bold;
       color: #ff4200;
       font-size: 18px; }
   .product-items .product-item .views-field-title {
     margin-bottom: 10px; }
-    .product-items .product-item .views-field-title a {
+    .product-items .product-item .views-field-title a, .product-items .product-item .views-field-title h3 {
       display: block;
       text-align: center;
       padding-top: 20px;

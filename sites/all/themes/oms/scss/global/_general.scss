@@ -45,10 +45,13 @@ ul.menu{
         color: #ff4200;
         font-size: 18px;
       }
+      font-weight: bold;
+      color: #ff4200;
+      font-size: 18px;
     }
     .views-field-title{
       margin-bottom: 10px;
-      a {
+      a,h3{
         display: block;
         text-align: center;
         padding-top: 20px;
