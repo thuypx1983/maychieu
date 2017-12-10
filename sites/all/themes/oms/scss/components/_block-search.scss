@@ -1,9 +1,11 @@
 .block-search{
   height: 50px;
   position: relative;
+  padding-left: 2%;
+  padding-right: 5%;
 
   .content{
-    margin-top: 10px;
+    margin-top: 8px;
     padding-left: 10px;
     top: 0px;
     z-index: 9999;
@@ -15,39 +17,49 @@
         display: table-cell;
         vertical-align: middle;
       }
+      .form-actions{
+        width: 100px;
+      }
     }
   }
   .form-submit{
-    background: $color4 none repeat scroll 0 0;
+    background: $color1_1 none repeat scroll 0 0;
     background-image: none;
     border: none;
-    color: #555;
+    color: $color3;
     display: block;
     font-size: 14px;
     height: 34px;
     line-height: 1.42857;
     padding: 6px 0px;
     width: 100%;
-    font-size: 12px;
-    font-style: italic;
-    color: $color1;
-    &:hover{
-      background: $color4 none repeat scroll 0 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .ui-autocomplete{
+    a.ui-state-focus{
+      border: none;
     }
   }
-}
-.form-submit{
+  .ui-autocomplete-fields{
+    display: table;
 
-  background: $color4 none repeat scroll 0 0;
-  background-image: none;
-  border: none;
-  color: #555;
-  display: block;
-  font-size: 14px;
-  height: 34px;
-  line-height: 1.42857;
-  padding: 6px 12px;
-  width: 100%;
+    .ui-autocomplete-field-uc_product_image{
+      display: table-cell;
+      vertical-align: middle;
+      padding-right: 15px;
+      img{
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .ui-autocomplete-field-title{
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 13px;
+    }
+  }
 }
 .form-text {
   background-color: #fff;

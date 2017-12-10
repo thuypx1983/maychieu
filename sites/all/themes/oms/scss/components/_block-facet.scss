@@ -1,0 +1,28 @@
+.block-facet{
+  margin-top: 10px;
+  .title{
+    display: block;
+    padding: 10px;
+    background-color: $color9;
+    font-weight: bold;
+  }
+  ul.facetapi-facet-sell-price,ul.facetapi-facet-taxonomy-catalog{
+    &>li{
+      list-style: none;
+      padding-left: 10px;
+      margin-left: 0px;
+      margin-top: 10px;
+      ul{
+        li{
+          list-style: none;
+          padding-left: 10px;
+          margin-left: 0px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .facetapi-checkbox{
+    margin-left: 0px;
+  }
+}

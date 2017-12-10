@@ -16,7 +16,7 @@ function oms_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
     // Use CSS to hide titile .element-invisible.
-    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+    $output = '';
     // comment below line to hide current page to breadcrumb
     $breadcrumb[] = drupal_get_title();
     $output .= '<nav class="breadcrumb">' . implode(' » ', $breadcrumb) . '</nav>';
@@ -125,6 +125,11 @@ function oms_preprocess_page(&$vars) {
   else {
     $vars['footer_copyright'] = NULL;
   }
+
+    if ( arg(0) == 'taxonomy' && arg(1) == 'term' ) {
+        $term = taxonomy_term_load(arg(2));
+        $vars['theme_hook_suggestions'][] = 'page__vocabulary__' . $term->vocabulary_machine_name;
+    }
 }
 
 /**

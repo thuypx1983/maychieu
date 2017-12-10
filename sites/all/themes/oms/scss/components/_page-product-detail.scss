@@ -1,10 +1,93 @@
 .node-type-product{
-  .node-add-to-cart{
-    color: $color3;
-    font-size: 20px;
-    font-weight: 300;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    height: auto;
+  .node-product{
+    h1.content-title{
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    .node-add-to-cart{
+      display: inline-block;
+      width: 187px;
+      height: 38px;
+      background: url(/sites/all/themes/oms/images/icon.png) no-repeat left -113px transparent;
+      text-decoration: none;
+      cursor: pointer;
+      text-indent: 99999px;
+    }
+    .horizontal-tabs ul.horizontal-tabs-list li{
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .horizontal-tabs ul.horizontal-tabs-list li a:hover{
+      background-color: transparent;
+    }
+    .facebook-button{
+      display: inline-block;
+      overflow: hidden;
+    }
+    .field-name-field-promotion{
+      background-color: #e80000;
+      border-radius: 3px;
+      padding: 10px;
+      color: $color3;
+      margin-top: 15px;
+      padding-left:60px;
+      background: url(/sites/all/themes/oms/images/gift.png) no-repeat center left #e80000;
+    }
+    .sell-price{
+      font-size: 20px;
+      color: #e80000;
+      font-weight: bold;
+    }
+    .cost{
+      color: #929292;
+      padding: 5px 0px;
+      font-size: 16px;
+      text-decoration: line-through;
+    }
+    .dia-diem{
+      display: table;
+      background-color: #f5f5f5;
+      padding-left: 10px;
+      padding-right: 10px;
+      .showroom{
+        display: table;
+        &>div{
+          display: table;
+          width: 100%;
+        }
+
+      }
+      .showroom .title {
+        font-weight: bold;
+        color: #333333;
+        margin-top: 0px;
+      }
+      .showroom .address {
+        background-color: #ffffff;
+        padding: 10px;
+        margin-bottom: 5px;
+        p.add{
+          font-size: 12px;
+          margin: 0px;
+          color: #797979;
+          a{
+            color: #797979;
+
+          }
+        }
+      }
+      .showroom .address .i {
+        float: left;
+        padding-left: 10px;
+      }
+      .showroom .address .s-l {
+        float: left;
+        width: 15px;
+        height: 15px;
+        background: url(/sites/all/themes/oms/images/icon.png) no-repeat -120px -91px transparent;
+      }
+    }
+
   }
+
 }

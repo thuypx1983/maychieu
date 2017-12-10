@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * @file
+ * Widgets for facets rendered as test link ranges.
+ */
+
+define ('FACET_API_RANGES_DYNAMIC_ENDPOINT_INFINITE', '*');
+
+/**
+ * Implements hook_facetapi_widgets().
+ */
+function facet_api_dynamic_ranges_facetapi_widgets() {
+  return array(
+    'facet_api_dynamic_ranges_ui_links' => array(
+      'handler' => array(
+        'label' => t('Dynamic Ranges: Links'),
+        'class' => 'FacetapiDynamicRangesWidgetLinks',
+        'query types' => array('term'),
+      ),
+    ),
+    'facet_api_dynamic_ranges_ui_checkbox_links' => array(
+      'handler' => array(
+        'label' => t('Dynamic Ranges: Links with checkboxes'),
+        'class' => 'FacetapiDynamicRangesWidgetCheckboxLinks',
+        'query types' => array('term'),
+      ),
+    ),
+  );
+}
+
+/**
+ * Generate array with ranges.
+ */
+function facet_api_dynamic_ranges_generate_facet_ranges($variables) {
+  $element = $variables['element'];
+  $range_field = $variables['range_field'];
+
+  // Get minimum  and maximum price and calculate step for the range and
+  // generate array with ranges.
+  $facet_values = array_keys($element);
+  $facet_values = array_filter($facet_values, function($var) {
+    return is_numeric($var) ? $var : '';
+  });
+  sort($facet_values, SORT_NUMERIC);
+
+  $max_facet_value = round($facet_values[count($facet_values) - 1]);
+  $pow = (int) log10((int) floor($max_facet_value / 10));
+  $step = pow(10, $pow);
+  $min_facet_value = floor($facet_values[0] / $step);
+  $range = range($min_facet_value, $max_facet_value, $step);
+
+  $tmp_ranges = array();
+  $facet_ranges = array();
+
+  foreach ($range as $key => $item) {
+    $min = floor($range[$key]);
+    $max = !empty($range[$key + 1]) ? floor($range[$key + 1]) : FALSE;
+
+    if (strlen($min) == 0) {
+      $min = $min_facet_value;
+    }
+    if (strlen($max) == 0) {
+      $max = $max_facet_value;
+    }
+    $tmp_ranges[] = array(
+      'min' => $min,
+      'max' => $max,
+      'label' => '',
+    );
+  }
+
+  if (count($tmp_ranges)) {
+    $params = drupal_get_query_parameters($_GET, array('q', 'page'));
+
+    foreach ($tmp_ranges as $tmp_range) {
+      $min = $tmp_range['min'];
+      $max = $tmp_range['max'];
+      $label = $tmp_range['label'];
+      $result_count = 0;
+
+      foreach ($facet_values as $val) {
+        if (($max != FACET_API_RANGES_DYNAMIC_ENDPOINT_INFINITE) && ($val > $max)) {
+          break;
+        }
+        elseif ($min != FACET_API_RANGES_DYNAMIC_ENDPOINT_INFINITE && ($val < $min)) {
+          continue;
+        }
+        $result_count += $element[$val]['#count'];
+      }
+
+      // Hide ranges with empty results.
+      if (!$result_count) {
+        if (empty($params['f'])) {
+          continue;
+        }
+        else {
+          $active = FALSE;
+          foreach ($params['f'] as $key => $active_filer) {
+            if (strpos($active_filer, $range_field) === 0) {
+              $active = TRUE;
+            }
+          }
+          if ($active) {
+            continue;
+          }
+        }
+      }
+
+      $facet_ranges[$min . ' - ' . $max] = _facet_api_dynamic_ranges_generate_range($min, $max, $result_count, $variables, $params, $label);
+    }
+  }
+
+  return $facet_ranges;
+}
+
+/**
+ * Helper function to generate range.
+ */
+function _facet_api_dynamic_ranges_generate_range($min, $max, $count, $variables, $params, $label = '') {
+  // Generate the new query.
+  $query = urlencode($variables['range_field']) . ":[$min TO $max]";
+  $active = FALSE;
+
+  // Add the new query or remove it if the range is already active.
+  if (empty($params['f'])) {
+    $params['f'] = array($query);
+  }
+  else {
+    $key = array_search($query, $params['f']);
+    if ($key !== FALSE) {
+      unset($params['f'][$key]);
+      $active = TRUE;
+    }
+    else {
+      $params['f'][] = $query;
+    }
+  }
+
+  if (empty($label)) {
+    $label = $variables['prefix'] . number_format($min, 0, '', '')
+      . $variables['suffix'] . ' – ' . $variables['prefix']
+      . number_format($max, 0, '', '') . $variables['suffix'];
+  }
+  // Build up a render array.
+  return array(
+    '#markup'        => $label,
+    '#path'          => $variables['target'],
+    '#html'          => FALSE,
+    '#indexed_value' => 'TODO: what to put here?',
+    '#count'         => $count,
+    '#query'         => $params,
+    '#active'        => $active,
+  );
+}

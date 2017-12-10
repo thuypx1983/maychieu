@@ -1,3 +1,8 @@
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_icons_css_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/menu_icons/menu_icons_css_item.tpl.php' -->
 a.menu-219, ul.links li.menu-219 a {
   background-image: url(/sites/default/files/styles/menu_icon/public/menu_icons/menu_icon_219.jpg);
   padding-left:45px;
@@ -6,6 +11,14 @@ a.menu-219, ul.links li.menu-219 a {
   height: 45px;
 }
 
+
+<!-- END OUTPUT from 'sites/all/modules/menu_icons/menu_icons_css_item.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_icons_css_item') -->
+<!-- BEGIN OUTPUT from 'sites/all/modules/menu_icons/menu_icons_css_item.tpl.php' -->
 a.menu-483, ul.links li.menu-483 a {
   background-image: url(/sites/default/files/styles/medium/public/menu_icons/menu_icon_483.png);
   padding-left:220px;
@@ -13,4 +26,7 @@ a.menu-483, ul.links li.menu-483 a {
   background-position: left;
   height: 220px;
 }
+
+
+<!-- END OUTPUT from 'sites/all/modules/menu_icons/menu_icons_css_item.tpl.php' -->
 
