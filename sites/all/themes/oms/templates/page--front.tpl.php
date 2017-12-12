@@ -98,9 +98,17 @@
     </div>
 
 
-  <?php if ($page['home_high1']): ?>
-    <?php print render($page['home_high1']); ?>
-  <?php endif; ?>
+    <div class="container product-sales-off home-high3">
+        <div class="title">
+            <span class="text">Sản phẩm bán chạy</span>
+            <a href="#">Xem thêm</a>
+        </div>
+        <div class="row">
+            <?php if ($page['home_high1']): ?>
+                <?php print render($page['home_high1']); ?>
+            <?php endif; ?>
+        </div>
+    </div>
 
 
 

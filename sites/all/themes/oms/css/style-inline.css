@@ -3778,6 +3778,9 @@ h1 {
       padding-top: 20px;
       font-weight: bold; }
 
+.front-block {
+  margin-bottom: 20px; }
+
 #header-top {
   padding: 8px 0px;
   background-color: #2b2b2b; }
@@ -4368,77 +4371,41 @@ span.icon-bar {
   .home-high3 .title a, .home-high4 .title a {
     float: right; }
 
-.block-featured-product {
-  padding-bottom: 60px;
-  margin-top: 50px; }
-  .block-featured-product .title-line {
-    position: relative;
-    overflow: hidden;
-    text-align: center; }
-    .block-featured-product .title-line .title {
-      display: inline-block;
-      vertical-align: baseline;
-      zoom: 1;
-      *display: inline;
-      *vertical-align: auto;
-      position: relative;
-      padding: 0 10px;
-      font-weight: bold; }
-      .block-featured-product .title-line .title:before, .block-featured-product .title-line .title:after {
-        content: '';
-        display: block;
-        width: 1000px;
-        position: absolute;
-        top: 0.73em;
-        border-top: 1px solid #dfdfdf; }
-      .block-featured-product .title-line .title:before {
-        right: 100%; }
-      .block-featured-product .title-line .title:after {
-        left: 100%; }
-  .block-featured-product .view-header {
-    margin-top: 10px;
-    margin-bottom: 35px; }
-    .block-featured-product .view-header p {
-      font-size: 20px;
-      font-weight: 400;
-      color: #3eaa3a;
-      text-align: center;
-      padding: 0px; }
-  .block-featured-product .views-row .row-content {
-    border: 1px solid #ebebeb; }
-  .block-featured-product .views-row .views-field-title a {
-    text-transform: uppercase;
-    display: block;
-    text-align: center;
-    padding-top: 20px;
-    text-transform: lowercase;
-    font-weight: bold; }
-    .block-featured-product .views-row .views-field-title a:first-letter {
-      text-transform: uppercase; }
-  .block-featured-product .views-row .views-field-sell-price {
-    padding-top: 20px; }
-    .block-featured-product .views-row .views-field-sell-price .uc-price {
-      font-weight: bold;
-      color: #e65c13;
-      font-size: 22px; }
-  .block-featured-product .views-row .views-field-uc-product-image img {
-    outline: none; }
-  .block-featured-product .slick-dots {
-    bottom: -50px; }
-    .block-featured-product .slick-dots li button::before {
-      font-size: 14px; }
-  .block-featured-product .slick-prev {
-    left: 0px;
-    z-index: 1; }
-    .block-featured-product .slick-prev:before {
-      color: #3eaa3a;
-      font-size: 30px; }
-  .block-featured-product .slick-next {
-    right: 0px;
-    z-index: 1; }
-    .block-featured-product .slick-next:before {
-      color: #3eaa3a;
-      font-size: 30px; }
+.block-featured-product .views-row .row-content {
+  border: 1px solid #ebebeb; }
+.block-featured-product .views-row .views-field-title a {
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  text-transform: lowercase;
+  font-weight: bold; }
+  .block-featured-product .views-row .views-field-title a:first-letter {
+    text-transform: uppercase; }
+.block-featured-product .views-row .views-field-sell-price {
+  padding-top: 20px; }
+  .block-featured-product .views-row .views-field-sell-price .uc-price {
+    font-weight: bold;
+    color: #e65c13;
+    font-size: 22px; }
+.block-featured-product .views-row .views-field-uc-product-image img {
+  outline: none; }
+.block-featured-product .slick-dots {
+  bottom: -50px; }
+  .block-featured-product .slick-dots li button::before {
+    font-size: 14px; }
+.block-featured-product .slick-prev {
+  left: 0px;
+  z-index: 1; }
+  .block-featured-product .slick-prev:before {
+    color: #3eaa3a;
+    font-size: 30px; }
+.block-featured-product .slick-next {
+  right: 0px;
+  z-index: 1; }
+  .block-featured-product .slick-next:before {
+    color: #3eaa3a;
+    font-size: 30px; }
 
 .block-testimonials {
   border-top: 1px solid #dfdfdf;
