@@ -4285,8 +4285,15 @@ span.icon-bar {
         top: 0px;
         height: 100%;
         left: 100%; }
-        #navigation #main-menu > ul > li > ul > li a {
-          background-size: 222px; }
+        #navigation #main-menu > ul > li > ul > li {
+          text-align: center; }
+          #navigation #main-menu > ul > li > ul > li a {
+            padding-top: 110px;
+            background-size: 100px;
+            text-align: center;
+            display: block;
+            padding-left: 0px;
+            background-position: top center; }
       #navigation #main-menu > ul > li.mega > ul {
         width: 400px; }
         #navigation #main-menu > ul > li.mega > ul > li {
