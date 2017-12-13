@@ -256,6 +256,8 @@ $databases = array (
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
+      'charset' => 'utf8',
+      'collation' => 'utf8_general_ci',
     ),
   ),
 );
