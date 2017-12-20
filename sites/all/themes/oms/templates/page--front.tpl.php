@@ -124,14 +124,14 @@
             <a href="#">Xem thêm</a>
         </div>
         <div class="row">
-            <div class="col-md-3 col-lg-3">
+            <div class="col-2-10">
               <?php
                   if ($page['home_high3_left']):
                     print render($page['home_high3_left']);
                   endif;
               ?>
             </div>
-            <div class="col-md-9 col-lg-9">
+            <div class="col-8-10">
               <?php
               if ($page['home_high3_right']):
                 print render($page['home_high3_right']);
@@ -153,14 +153,14 @@
             <a href="#">Xem thêm</a>
         </div>
         <div class="row">
-            <div class="col-md-9 col-lg-9">
+            <div class="col-6-10">
               <?php
               if ($page['home_high4_left']):
                 print render($page['home_high4_left']);
               endif;
               ?>
             </div>
-            <div class="col-md-3 col-lg-3">
+            <div class="col-4-10">
               <?php
               if ($page['home_high4_right']):
                 print render($page['home_high4_right']);
