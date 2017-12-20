@@ -4430,23 +4430,6 @@ span.icon-bar {
   .home-high3 .title a, .home-high4 .title a {
     float: right; }
 
-.block-featured-product .views-row .row-content {
-  border: 1px solid #ebebeb; }
-.block-featured-product .views-row .views-field-title a {
-  text-transform: uppercase;
-  display: block;
-  text-align: center;
-  padding-top: 20px;
-  text-transform: lowercase;
-  font-weight: bold; }
-  .block-featured-product .views-row .views-field-title a:first-letter {
-    text-transform: uppercase; }
-.block-featured-product .views-row .views-field-sell-price {
-  padding-top: 20px; }
-  .block-featured-product .views-row .views-field-sell-price .uc-price {
-    font-weight: bold;
-    color: #e65c13;
-    font-size: 22px; }
 .block-featured-product .views-row .views-field-uc-product-image img {
   outline: none; }
 .block-featured-product .slick-dots {
