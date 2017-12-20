@@ -63,7 +63,22 @@ h1{
       }
     }
   }
-}
+  .views-field-field-discount{
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+    float: right;
+    margin-top: 10px;
+    width: 41px;
+    height: 41px;
+    text-align: center;
+    background: url("/sites/all/themes/oms/images/icon.png") no-repeat scroll -241px -45px transparent;
+    color: #fff;
+    line-height: 41px;
+    font-weight: bold;
+  }
+
+ }
 .front-block{
   margin-bottom: 20px;
 }

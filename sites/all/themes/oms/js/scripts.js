@@ -45,8 +45,8 @@
                 arrows: true,
                 dots:false,
                 infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 4,
+                slidesToShow: 5,
+                slidesToScroll: 5,
                 dots:false,
             })
         },
