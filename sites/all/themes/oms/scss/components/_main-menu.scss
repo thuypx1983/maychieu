@@ -100,6 +100,9 @@
   #main-menu .menu a.active-trail{
     background: transparent !important;
   }
+  #navigation #main-menu{
+    background-color: $color1;
+  }
   #navigation #main-menu >ul{
     &>li{
       border-bottom: 1px solid $color3;

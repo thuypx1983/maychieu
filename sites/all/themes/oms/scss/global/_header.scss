@@ -63,4 +63,39 @@ span.icon-bar{
       max-height: 40px;
     }
   }
+  #header-bottom{
+    &>.container{
+      .mobile-row{
+        display: table;
+        width: 100%;
+        .button-mobile{
+          display: table-cell;
+          width: 40px;
+          vertical-align: middle;
+          text-align: center;
+          padding-left: 5px;
+
+        }
+        .region-header{
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          .region-content{
+            display: table;
+            width: 100%;
+            &>div{
+              display: table-cell;
+            }
+          }
+        }
+      }
+    }
+    .block-logo{
+      img{
+        max-height: 40px;
+        width: auto;
+      }
+    }
+  }
 }
+
