@@ -4425,6 +4425,9 @@ span.icon-bar {
   #main-menu .menu a.active-trail {
     background: transparent !important; }
 
+  #navigation #main-menu {
+    background-color: #3eaa3a; }
+
   #navigation #main-menu > ul > li {
     border-bottom: 1px solid #ffffff;
     display: block;
