@@ -124,7 +124,7 @@
             <a href="#">Xem thêm</a>
         </div>
         <div class="row">
-            <div class="col-2-10">
+            <div class="col-2-10 hidden-xs hidden-sm">
               <?php
                   if ($page['home_high3_left']):
                     print render($page['home_high3_left']);
@@ -160,7 +160,7 @@
               endif;
               ?>
             </div>
-            <div class="col-4-10">
+            <div class="col-4-10 hidden-xs hidden-sm">
               <?php
               if ($page['home_high4_right']):
                 print render($page['home_high4_right']);
