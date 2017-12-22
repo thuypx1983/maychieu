@@ -72,7 +72,7 @@
   ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-lg-3">
+            <div class="col-md-3 col-lg-3 hidden-sm hidden-xs">
                 <!-- start main-menu -->
                 <nav id="navigation" class="clearfix" role="navigation">
                     <div id="main-menu">

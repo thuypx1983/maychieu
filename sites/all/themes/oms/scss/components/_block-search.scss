@@ -74,9 +74,21 @@
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   width: 100%;
 }
-@include bp(max-width,$bp-tablet) {
-  .block-search .content{
-    position: fixed;
-    width: 100%;
+@include bp(max-width,$bp-tablet){
+  .block-search{
+    vertical-align: middle;
+    .content{
+      height: auto;
+      margin-top:0;
+      padding-left: 0;
+      padding-right: 0;
+
+    }
   }
+  #block-uc-cart-cart{
+    width: 40px;
+    .cart-block-title-bar{
+      display: none;
+    }
+}
 }

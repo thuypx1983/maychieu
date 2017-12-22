@@ -3880,12 +3880,34 @@ span.icon-bar {
   #header-bottom span.icon-bar:first-child {
     margin-top: 0px; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
   #header-top .block-logo a {
     width: 100%; }
     #header-top .block-logo a img {
       margin-top: 0px;
-      max-height: 40px; } }
+      max-height: 40px; }
+
+  #header-bottom > .container .mobile-row {
+    display: table;
+    width: 100%; }
+    #header-bottom > .container .mobile-row .button-mobile {
+      display: table-cell;
+      width: 40px;
+      vertical-align: middle;
+      text-align: center;
+      padding-left: 5px; }
+    #header-bottom > .container .mobile-row .region-header {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center; }
+      #header-bottom > .container .mobile-row .region-header .region-content {
+        display: table;
+        width: 100%; }
+        #header-bottom > .container .mobile-row .region-header .region-content > div {
+          display: table-cell; }
+  #header-bottom .block-logo img {
+    max-height: 40px;
+    width: auto; } }
 /*components*/
 #breadcrumb {
   padding: 10px;
@@ -4297,10 +4319,19 @@ span.icon-bar {
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   width: 100%; }
 
-@media only screen and (max-width: 767px) {
-  .block-search .content {
-    position: fixed;
-    width: 100%; } }
+@media only screen and (max-width: 992px) {
+  .block-search {
+    vertical-align: middle; }
+    .block-search .content {
+      height: auto;
+      margin-top: 0;
+      padding-left: 0;
+      padding-right: 0; }
+
+  #block-uc-cart-cart {
+    width: 40px; }
+    #block-uc-cart-cart .cart-block-title-bar {
+      display: none; } }
 #navigation {
   background-color: #ffffff;
   border-left: solid 1px #d8d8d8;
@@ -4375,7 +4406,7 @@ span.icon-bar {
     left: 0px;
     z-index: 100; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
   #main-menu .menu a.active-trail {
     background: transparent !important; }
 
@@ -4431,7 +4462,8 @@ span.icon-bar {
     float: right; }
 
 .block-featured-product .views-row .views-field-uc-product-image img {
-  outline: none; }
+  outline: none;
+  margin: auto; }
 .block-featured-product .slick-dots {
   bottom: -50px; }
   .block-featured-product .slick-dots li button::before {
