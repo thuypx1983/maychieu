@@ -89,7 +89,7 @@
 
         /*
          * detect star for display
-         */git 
+         */
         detectStar:function() {
             $('.views-field-field-rate').each(function () {
                 var rate = parseInt($(this).find('.field-content').text());
