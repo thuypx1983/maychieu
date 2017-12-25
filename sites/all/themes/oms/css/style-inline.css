@@ -4449,10 +4449,21 @@ span.icon-bar {
       background-color: #3eaa3a;
       width: 100%; }
     #navigation #main-menu > ul > li.mega > ul {
-      width: 100%; }
+      width: 100%;
+      left: 0px; }
       #navigation #main-menu > ul > li.mega > ul > li {
         display: block;
-        width: 100%; } }
+        width: 100%; }
+        #navigation #main-menu > ul > li.mega > ul > li > a {
+          background-image: none;
+          padding-top: 0px; }
+        #navigation #main-menu > ul > li.mega > ul > li > ul > li > a {
+          background-image: none;
+          padding-top: 0px; }
+    #navigation #main-menu > ul > li:hover > ul {
+      display: none; }
+    #navigation #main-menu > ul > li.open > ul {
+      display: block; } }
 .main-slider .slick-next {
   right: 25px;
   z-index: 10;

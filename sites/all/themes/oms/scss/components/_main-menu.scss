@@ -130,10 +130,35 @@
       &.mega{
         &>ul{
           width: 100%;
+          left: 0px;
           &>li{
+
             display: block;
             width: 100%;
+            &>a{
+              background-image: none;
+              padding-top: 0px;
+            }
+            &>ul{
+              &>li{
+                &>a{
+
+                  background-image: none;
+                  padding-top: 0px;
+                }
+              }
+            }
           }
+        }
+      }
+      &:hover{
+        &>ul{
+          display: none;
+        }
+      }
+      &.open{
+        &>ul{
+          display: block;
         }
       }
     }
