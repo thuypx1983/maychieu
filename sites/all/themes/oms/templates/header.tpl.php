@@ -18,13 +18,6 @@
     <div id="header-bottom">
         <div class="container">
             <div class="row">
-                <div class="button-mobile hidden-md hidden-lg">
-                    <div class="menu-btn">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </div>
-                </div>
                 <div class="col-md-3 col-lg-3 hidden-sm hidden-xs desktop-menu">
                     <div class="menu-category-button">
                         <div class="icon-menu-category">
@@ -50,7 +43,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9 col-lg-9">
+                <div class="col-md-9 col-lg-9 mobile-row">
+                    <div class="button-mobile hidden-md hidden-lg">
+                        <div class="menu-btn">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </div>
+                    </div>
                   <?php print render($page['header']); ?>
                 </div>
             </div>

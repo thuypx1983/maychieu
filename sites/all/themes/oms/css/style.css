@@ -345,6 +345,23 @@ body.views--set-products--page-2 .view-set-products .views-row {
     width: 15px;
     height: 15px;
     background: url(/sites/all/themes/oms/images/icon.png) no-repeat -120px -91px transparent; }
+.node-type-product .node-product .form-item-qty {
+  display: none; }
+.node-type-product .node-product .field-name-field-discount {
+  position: absolute;
+  right: 40%;
+  bottom: 72px;
+  float: right;
+  margin-top: 10px;
+  width: 41px;
+  height: 41px;
+  text-align: center;
+  background: url("/sites/all/themes/oms/images/icon.png") no-repeat scroll -241px -45px transparent;
+  color: #fff;
+  line-height: 41px;
+  font-weight: bold; }
+  .node-type-product .node-product .field-name-field-discount .field-item:after {
+    content: "%"; }
 
 .block-facet {
   margin-top: 10px; }

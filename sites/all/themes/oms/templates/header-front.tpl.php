@@ -11,7 +11,6 @@
     <div id="header-middle">
         <div class="container">
             <div class="row">
-
               <?php print render($page['header_middle']); ?>
             </div>
         </div>
@@ -19,7 +18,6 @@
     <div id="header-bottom">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-3 col-lg-3 hidden-sm hidden-xs desktop-menu">
                    <div class="menu-category-button">
                        <div class="icon-menu-category">
