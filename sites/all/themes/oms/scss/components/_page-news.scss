@@ -1,0 +1,17 @@
+.view-news.view-display-id-page{
+  .views-row{
+    margin-bottom: 10px;
+    display: table;
+    .views-field-title{
+      font-weight: bold;
+    }
+    .views-field-field-image{
+      float: left;
+      width: 200px;
+      margin-right: 10px;
+    }
+    .views-field-body{
+      color: $color13;
+    }
+  }
+}

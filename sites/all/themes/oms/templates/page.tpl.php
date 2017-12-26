@@ -87,9 +87,7 @@
                     </div>
 
                     <div class="page-title">
-                        <div class="container">
-                            <h1 class="title"><?php echo $title?></h1>
-                        </div>
+                        <h1 class="title"><?php echo $title?></h1>
                     </div>
                     <section id="post-content" role="main">
                       <?php print render($page['content']); ?>
