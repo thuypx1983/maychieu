@@ -44,6 +44,7 @@ h1{
     }
     .views-field-sell-price {
       margin-bottom: 5px;
+      margin-top: 5px;
       .uc-price{
         font-weight: bold;
         color: #ff4200;
@@ -61,6 +62,10 @@ h1{
         padding-top: 20px;
         font-weight: bold;
       }
+    }
+    .views-field-cost{
+      color: $color8;
+      text-decoration: line-through;
     }
   }
   .views-field-field-discount{

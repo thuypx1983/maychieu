@@ -124,20 +124,11 @@
             <a href="#">Xem thêm</a>
         </div>
         <div class="row">
-            <div class="col-2-10 hidden-xs hidden-sm">
-              <?php
-                  if ($page['home_high3_left']):
-                    print render($page['home_high3_left']);
-                  endif;
-              ?>
-            </div>
-            <div class="col-8-10">
-              <?php
-              if ($page['home_high3_right']):
+            <?php
+            if ($page['home_high3_right']):
                 print render($page['home_high3_right']);
-              endif;
-              ?>
-            </div>
+            endif;
+            ?>
         </div>
     </div>
 
@@ -153,28 +144,48 @@
             <a href="#">Xem thêm</a>
         </div>
         <div class="row">
-            <div class="col-6-10">
-              <?php
-              if ($page['home_high4_left']):
+            <?php
+            if ($page['home_high4_left']):
                 print render($page['home_high4_left']);
-              endif;
-              ?>
-            </div>
-            <div class="col-4-10 hidden-xs hidden-sm">
-              <?php
-              if ($page['home_high4_right']):
-                print render($page['home_high4_right']);
-              endif;
-              ?>
-            </div>
+            endif;
+            ?>
         </div>
     </div>
 
-  <?php if ($page['home_high2']): ?>
-      <div class="container">
-        <?php print render($page['home_high2']); ?>
-      </div>
-  <?php endif; ?>
+    <div class="container home-high5">
+        <div class="row">
+            <div class="col-md-6 col-lg-6">
+                <?php
+                if ($page['home_high5_left']):
+                    print render($page['home_high5_left']);
+                endif;
+                ?>
+            </div>
+            <div class="col-md-6 col-lg-6">
+
+                <?php
+                if ($page['home_high5_right']):
+                    print render($page['home_high5_right']);
+                endif;
+                ?>
+            </div>
+
+        </div>
+    </div>
+
+    <?php if ($page['home_high2']): ?>
+        <div class="container">
+            <?php print render($page['home_high2']); ?>
+        </div>
+    <?php endif; ?>
+
+    <div class="container home-high6">
+        <?php
+        if ($page['home_high6']):
+            print render($page['home_high6']);
+        endif;
+        ?>
+    </div>
 
   <?php
   include(drupal_get_path('theme', 'oms').'/templates/footer.tpl.php');

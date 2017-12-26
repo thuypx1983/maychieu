@@ -6,6 +6,7 @@ stylesheets[all][] = css/style.css
 stylesheets[all][] = js/pushy/css/pushy.css
 stylesheets[all][] = js/magnific-popup/magnific-popup.css
 scripts[] = js/magnific-popup/jquery.magnific-popup.js
+scripts[] = /sites/default/files/css/menu_icons.css
 scripts[] = js/slick.min.js
 scripts[] = js/overwrites.js
 scripts[] = js/scripts.js
@@ -25,6 +26,9 @@ regions[banner_home_2]     = banner_home_2
 
 regions[home_high4_left]     = Home Highlight 4 left
 regions[home_high4_right]     = Home Highlight 4 right
+regions[home_high5_left]     = Home Highlight 5 left
+regions[home_high5_right]     = Home Highlight 5 right
+regions[home_high6]     = Home Highlight 6
 regions[content_top]    = Content Top
 regions[content]        = Content
 regions[banner_top_content]        = banner_top_content

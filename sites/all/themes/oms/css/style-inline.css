@@ -3821,6 +3821,7 @@ h1 {
     border: 1px solid #ebebeb; }
   .product-items .product-item .views-field-sell-price {
     margin-bottom: 5px;
+    margin-top: 5px;
     font-weight: bold;
     color: #ff4200;
     font-size: 18px; }
@@ -3835,6 +3836,9 @@ h1 {
       text-align: center;
       padding-top: 20px;
       font-weight: bold; }
+  .product-items .product-item .views-field-cost {
+    color: #b7b7b7;
+    text-decoration: line-through; }
 .product-items .views-field-field-discount {
   position: absolute;
   right: 10px;
@@ -4318,7 +4322,7 @@ span.icon-bar {
       vertical-align: middle;
       font-size: 13px; }
 
-.form-text {
+.block-search .form-text {
   background-color: #fff;
   background-image: none;
   border: none;
@@ -4330,6 +4334,27 @@ span.icon-bar {
   padding: 6px 12px;
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   width: 100%; }
+
+.form-text {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #b7b7b7;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%; }
+
+.button-primary {
+  border: 1px solid #ffffff;
+  background-color: #e65c13;
+  line-height: 1.42857;
+  padding: 6px 12px;
+  font-weight: bold;
+  color: #ffffff; }
 
 @media only screen and (max-width: 992px) {
   .block-search {
@@ -4391,7 +4416,7 @@ span.icon-bar {
         width: 00px;
         position: absolute;
         top: 0px;
-        height: 100%;
+        min-height: 100%;
         left: 100%; }
         #navigation #main-menu > ul > li > ul > li {
           text-align: center; }
@@ -4562,5 +4587,3 @@ span.icon-bar {
           filter: opacity(1); }
         .block-testimonials .content .views-row.active .info {
           display: block; }
-
-/*# sourceMappingURL=style-inline.css.map */
