@@ -456,7 +456,8 @@ body.views--set-products--page-2 .view-set-products .views-row {
 
 .view-news.view-display-id-page .views-row {
   margin-bottom: 10px;
-  display: table; }
+  display: table;
+  width: 100%; }
   .view-news.view-display-id-page .views-row .views-field-title {
     font-weight: bold; }
   .view-news.view-display-id-page .views-row .views-field-field-image {

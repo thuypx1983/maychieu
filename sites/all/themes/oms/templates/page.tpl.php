@@ -72,9 +72,16 @@
     <div id="main">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-lg-3">
-                  <?php print render($page['sidebar_first']); ?>
-                </div>
+                <?php
+                if($page['sidebar_first']){
+                    ?>
+
+                    <div class="col-md-3 col-lg-3">
+                        <?php print render($page['sidebar_first']); ?>
+                    </div>
+                <?php
+                }
+                ?>
                 <div class="col-md-9 col-lg-9">
                     <div id="breadcrumb"><?php print $breadcrumb; ?></div>
                     <div class="content-header">
@@ -93,6 +100,15 @@
                       <?php print render($page['content']); ?>
                     </section>
                 </div>
+                <?php
+                if($page['sidebar_second']){
+                    ?>
+                    <div class="col-md-3 col-lg-3">
+                        <?php print render($page['sidebar_second']); ?>
+                    </div>
+                    <?php
+                }
+                ?>
             </div>
 
         </div>
