@@ -3856,6 +3856,39 @@ h1 {
 .front-block {
   margin-bottom: 20px; }
 
+.block {
+  position: relative; }
+  .block .title {
+    background-color: #ebebeb;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; }
+
+.block-views .view-header {
+  position: absolute;
+  right: 0px;
+  top: 0px; }
+  .block-views .view-header p, .block-views .view-header ul {
+    display: inline-block; }
+  .block-views .view-header ul {
+    padding-left: 10px;
+    margin: 0px; }
+    .block-views .view-header ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 10px 0px; }
+      .block-views .view-header ul li a {
+        display: inline-block;
+        border-right: 1px solid #ffffff;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: bold; }
+      .block-views .view-header ul li:last-child a {
+        border-right: 0px; }
+
 #header-top {
   padding: 8px 0px;
   background-color: #2b2b2b; }
@@ -4587,3 +4620,5 @@ span.icon-bar {
           filter: opacity(1); }
         .block-testimonials .content .views-row.active .info {
           display: block; }
+
+/*# sourceMappingURL=style-inline.css.map */
