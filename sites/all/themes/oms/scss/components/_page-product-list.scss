@@ -14,4 +14,38 @@
 
     }
   }
+
+}
+.region-sidebar-first{
+  .block{
+    border: 1px solid $color9;
+
+  }
+  .block-facet ul.facetapi-facet-sell-price > li{
+    border-bottom: 1px dashed $color9;
+    padding-bottom: 14px;
+    a{
+      font-weight: 500;
+    }
+  }
+  .block-facet ul.facetapi-facet-taxonomy-catalog li{
+    border-bottom: 1px dashed $color9;
+    padding-bottom: 14px;
+    &.expanded{
+      padding: 0px;
+      &>a{
+        padding-left: 10px;
+        font-weight: bold;
+        font-weight: 500;
+        display: block;
+        padding-bottom: 5px;
+      }
+      li{
+        a{
+          padding-left: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }
