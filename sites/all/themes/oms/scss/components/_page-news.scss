@@ -1,6 +1,8 @@
 .view-news.view-display-id-page{
   .views-row{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $color9;
+    padding-bottom: 20px;
     display: table;
     width: 100%;
     .views-field-title{

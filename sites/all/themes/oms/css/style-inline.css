@@ -3958,12 +3958,12 @@ span.icon-bar {
     max-height: 40px;
     width: auto; } }
 /*components*/
-#breadcrumb {
+#breadcrumbs {
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #ebebeb;
   border-radius: 3px; }
-  #breadcrumb .breadcrumb {
+  #breadcrumbs .breadcrumb {
     padding-bottom: 0px; }
 
 /* Slider */
@@ -4378,8 +4378,7 @@ span.icon-bar {
   height: 34px;
   line-height: 1.42857;
   padding: 6px 12px;
-  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-  width: 100%; }
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; }
 
 .button-primary {
   border: 1px solid #ffffff;
@@ -4620,5 +4619,8 @@ span.icon-bar {
           filter: opacity(1); }
         .block-testimonials .content .views-row.active .info {
           display: block; }
+
+.region-sidebar-second {
+  padding-top: 10px; }
 
 /*# sourceMappingURL=style-inline.css.map */

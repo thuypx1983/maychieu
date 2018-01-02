@@ -1,4 +1,4 @@
-Drupal.behaviors.ucCollapseBlock = {
+;Drupal.behaviors.ucCollapseBlock = {
     attach: function(context) {
         jQuery('.cart-block-title-bar:not(.ucCollapseBlock-processed)', context).addClass('ucCollapseBlock-processed').click(
             function() {
