@@ -26,6 +26,15 @@ h1{
   font-weight: normal;
   font-size: 22px;
 }
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .row-content{
   height: 100%;
   padding: 10px 5px;
@@ -125,6 +134,46 @@ h1{
         &:last-child{
           a{
             border-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include bp(max-width,$bp-tablet){
+  .block-views{
+    .view-header{
+      .header-content{
+        position: relative;
+        span{
+          padding: 10px 10px;
+          display: inline-block;
+          font-weight: bold;
+        }
+        ul{
+          display: none;
+          position: absolute;
+          top:100%;
+          right: 0px;
+          border-left: 1px solid $color2;
+          border-right: 1px solid $color2;
+          border-bottom: 1px solid $color2;
+          background-color: $color2;
+          z-index: 1;
+        }
+      }
+      &:hover{
+        span{
+          background-color: $color2;
+        }
+        ul{
+          display: block;
+          li{
+            a{
+              border-right: none;
+              display: block;
+            }
           }
         }
       }

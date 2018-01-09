@@ -111,6 +111,10 @@
     .cart-block-title-bar{
       display: none;
     }
+    &.block .title{
+      background-color: transparent;
+      margin-bottom: 0px;
+    }
   }
   .block-search .content .container-inline .form-actions{
     width: 70px;

@@ -116,6 +116,9 @@
 .banner-middle {
   margin-top: 30px;
   margin-bottom: 30px; }
+  .banner-middle img {
+    width: 100% !important;
+    height: auto !important; }
 
 body.views--set-products--page-2 .page-title {
   padding: 20px 0; }
@@ -467,6 +470,14 @@ body.views--set-products--page-2 .view-set-products .views-row {
     font-size: 16px;
     font-weight: bold; }
 
+@media only screen and (max-width: 992px) {
+  .region-home-high5-right {
+    padding-left: 0px; }
+    .region-home-high5-right .form-text {
+      max-width: 100%; }
+
+  .region-home-high5-left {
+    padding-right: 0px; } }
 #webform-client-form-44 .webform-component--email {
   position: relative; }
   #webform-client-form-44 .webform-component--email .form-actions {

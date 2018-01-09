@@ -6,6 +6,7 @@
   .content{
     position: relative;
     .view-header{
+      position: relative;
       margin-bottom: 15px;
       p{
         color: $color1;
@@ -18,8 +19,7 @@
       display: inline-block;
       height: 48px;
       margin-right: 4px;
-      padding-bottom: 12px;
-      padding-top: 12px;
+      padding-top: 35px;
       transition: all 0.25s ease-out 0s;
       width: 24px;
       .info{
@@ -32,11 +32,13 @@
         width: 100%;
         -webkit-filter: opacity(.6);
         filter: opacity(.6);
+        display: inline-block;
       }
       .info{
         position: absolute;
         top: calc(100% + 1em);
         width: 400px;
+        max-width: 100%;
         left: 50%;
         transform: translate(-50%, 0);
         .views-field-title{
@@ -62,5 +64,11 @@
         }
       }
     }
+  }
+
+}
+.partner{
+  .slick-dots{
+    bottom: 0px;
   }
 }

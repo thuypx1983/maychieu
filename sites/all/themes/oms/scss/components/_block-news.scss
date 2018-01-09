@@ -74,3 +74,14 @@
     }
   }
 }
+@include bp(max-width,$bp-tablet){
+  .region-home-high5-right{
+    padding-left: 0px;
+    .form-text{
+      max-width: 100%;
+    }
+  }
+  .region-home-high5-left{
+    padding-right: 0px;
+  }
+}
