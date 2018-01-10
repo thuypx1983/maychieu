@@ -50,6 +50,7 @@ h1{
     margin-bottom: 10px;
     .row-content{
       border: 1px solid $color9;
+      position: relative;
     }
     .views-field-sell-price {
       margin-bottom: 5px;
@@ -178,5 +179,40 @@ h1{
         }
       }
     }
+  }
+  .product-items{
+    .product-item{
+      margin-bottom: 10px;
+
+      .views-field-sell-price {
+        .uc-price{
+          font-size: 15px;
+        }
+        font-weight: bold;
+        color: #ff4200;
+        font-size: 15px;
+      }
+      .views-field-title{
+        margin-bottom: 10px;
+        a,h3{
+          font-size: 13px;
+        }
+      }
+    }
+    .views-field-field-discount{
+      position: absolute;
+      right:10px;
+      bottom: 10px;
+      float: right;
+      margin-top: 10px;
+      width: 41px;
+      height: 41px;
+      text-align: center;
+      background: url("/sites/all/themes/oms/images/icon.png") no-repeat scroll -241px -45px transparent;
+      color: #fff;
+      line-height: 41px;
+      font-weight: bold;
+    }
+
   }
 }

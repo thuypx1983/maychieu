@@ -3815,7 +3815,8 @@ h1 {
 .product-items .product-item {
   margin-bottom: 10px; }
   .product-items .product-item .row-content {
-    border: 1px solid #ebebeb; }
+    border: 1px solid #ebebeb;
+    position: relative; }
   .product-items .product-item .views-field-sell-price {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -3909,7 +3910,33 @@ h1 {
     display: block; }
     .block-views .view-header:hover ul li a {
       border-right: none;
-      display: block; } }
+      display: block; }
+
+  .product-items .product-item {
+    margin-bottom: 10px; }
+    .product-items .product-item .views-field-sell-price {
+      font-weight: bold;
+      color: #ff4200;
+      font-size: 15px; }
+      .product-items .product-item .views-field-sell-price .uc-price {
+        font-size: 15px; }
+    .product-items .product-item .views-field-title {
+      margin-bottom: 10px; }
+      .product-items .product-item .views-field-title a, .product-items .product-item .views-field-title h3 {
+        font-size: 13px; }
+  .product-items .views-field-field-discount {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    float: right;
+    margin-top: 10px;
+    width: 41px;
+    height: 41px;
+    text-align: center;
+    background: url("/sites/all/themes/oms/images/icon.png") no-repeat scroll -241px -45px transparent;
+    color: #fff;
+    line-height: 41px;
+    font-weight: bold; } }
 #header-top {
   padding: 8px 0px;
   background-color: #2b2b2b; }
@@ -4272,7 +4299,9 @@ span.icon-bar {
   .block-uc-cart .title {
     display: table;
     width: 100%;
-    height: 50px; }
+    height: 50px;
+    margin-bottom: 0px;
+    background-color: #359131; }
     .block-uc-cart .title a {
       display: table-cell;
       text-align: center;
@@ -4315,6 +4344,123 @@ span.icon-bar {
       .block-uc-cart .content .cart-block-summary .cart-block-summary-links .links li {
         display: inline-block; }
 
+#uc-cart-view-form .sticky-table, #uc-cart-checkout-form .sticky-table {
+  border: 1px solid #CCC; }
+  #uc-cart-view-form .sticky-table thead th, #uc-cart-checkout-form .sticky-table thead th {
+    background-color: #ebebeb;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: none; }
+  #uc-cart-view-form .sticky-table tbody tr, #uc-cart-checkout-form .sticky-table tbody tr {
+    background-color: transparent;
+    border-bottom: 1px dotted #ebebeb; }
+    #uc-cart-view-form .sticky-table tbody tr td, #uc-cart-checkout-form .sticky-table tbody tr td {
+      vertical-align: middle;
+      padding: 10px 5px; }
+      #uc-cart-view-form .sticky-table tbody tr td.remove input, #uc-cart-checkout-form .sticky-table tbody tr td.remove input {
+        border: none;
+        padding: 5px;
+        color: #ffffff; }
+      #uc-cart-view-form .sticky-table tbody tr td.qty input, #uc-cart-checkout-form .sticky-table tbody tr td.qty input {
+        width: 35px;
+        padding: 6px;
+        text-align: center; }
+      #uc-cart-view-form .sticky-table tbody tr td.price .uc-price, #uc-cart-checkout-form .sticky-table tbody tr td.price .uc-price {
+        font-weight: bold; }
+    #uc-cart-view-form .sticky-table tbody tr .subtotal .uc-price, #uc-cart-checkout-form .sticky-table tbody tr .subtotal .uc-price {
+      font-weight: bold;
+      font-size: 18px;
+      color: #e65c13; }
+#uc-cart-view-form input[type=submit], #uc-cart-checkout-form input[type=submit] {
+  -moz-user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: #e65c13 none repeat scroll 0 0;
+  color: #fff;
+  margin-left: 10px; }
+#uc-cart-view-form select, #uc-cart-checkout-form select {
+  padding: 5px; }
+
+#uc-cart-checkout-form > div {
+  border: 1px solid #CCC;
+  padding: 10px; }
+#uc-cart-checkout-form fieldset {
+  border: none;
+  padding: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px; }
+  #uc-cart-checkout-form fieldset legend {
+    width: 100%; }
+    #uc-cart-checkout-form fieldset legend span.fieldset-legend {
+      font-weight: bold;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ebebeb;
+      display: block;
+      font-size: 15px;
+      text-transform: uppercase; }
+#uc-cart-checkout-form #comments-pane .fieldset-description {
+  display: none; }
+#uc-cart-checkout-form #comments-pane .form-item-panes-comments-comments label {
+  display: none; }
+#uc-cart-checkout-form .form-item-panes-customer-primary-email label {
+  float: left;
+  padding: 5px 6px 6px;
+  text-align: right;
+  width: 145px; }
+#uc-cart-checkout-form input {
+  max-width: 100%; }
+
+.uc-store-address-field .form-item label {
+  width: 145px; }
+
+@media only screen and (max-width: 512px) {
+  #uc-cart-checkout-form .form-item-panes-customer-primary-email label {
+    width: 100%;
+    text-align: left;
+    float: none;
+    display: block;
+    width: 100%; }
+  #uc-cart-checkout-form .form-item-panes-customer-primary-email input {
+    width: 100%; }
+  #uc-cart-checkout-form #billing-pane label {
+    width: 100%;
+    text-align: left;
+    float: none;
+    display: block;
+    width: 100%; }
+  #uc-cart-checkout-form #billing-pane input {
+    width: 100%; }
+
+  #uc-cart-view-form .form-actions a {
+    display: none; }
+
+  #uc-cart-view-form .sticky-table thead th, #uc-cart-checkout-form .sticky-table thead th {
+    padding-left: 2px;
+    padding-right: 2px; }
+
+  #uc-cart-view-form .sticky-table tbody tr td.remove input,
+  #uc-cart-checkout-form .sticky-table tbody tr td.remove input {
+    margin: 0px; }
+
+  #uc-cart-view-form img {
+    padding-right: 0px;
+    width: 50px; }
+
+  #uc-cart-view-form .sticky-table thead th, #uc-cart-checkout-form .sticky-table thead th {
+    letter-spacing: -0.5pt;
+    font-size: 12px; } }
 .block-menu-user ul {
   padding: 0px;
   margin: 0px;
@@ -4399,7 +4545,8 @@ span.icon-bar {
   height: 34px;
   line-height: 1.42857;
   padding: 6px 12px;
-  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; }
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  max-width: 100%; }
 
 .button-primary {
   border: 1px solid #ffffff;

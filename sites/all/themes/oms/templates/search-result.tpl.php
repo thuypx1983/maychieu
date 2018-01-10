@@ -64,11 +64,13 @@
  * @ingroup themeable
  */
 ?>
-<li class="<?php print $classes; ?> col-md-3 col-lg-3 col-sm-6 col-xs-6"<?php print $attributes; ?>>
-  <?php
-  print render(field_view_field('node', $result['node'], 'uc_product_image', array('label'=>'hidden')));
-  ?>
-  <div class="fields-title">
-    <a href="<?php echo url('node/'.$result['node']->nid)?>"><?php echo $result['node']->title?></a>
-  </div>
+<li class="<?php print $classes; ?> col-md-3 col-lg-3 col-sm-6 col-xs-6 product-item"<?php print $attributes; ?> >
+    <div class="row-content">
+          <?php
+          print render(field_view_field('node', $result['node'], 'uc_product_image', array('label'=>'hidden')));
+          ?>
+          <div class="fields-title">
+            <a href="<?php echo url('node/'.$result['node']->nid)?>"><?php echo $result['node']->title?></a>
+          </div>
+    </div>
 </li>

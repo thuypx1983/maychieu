@@ -108,6 +108,7 @@
 
         autoHeight:function(){
             STNScript.equalHeight('.product-items .view-content .views-row');
+            STNScript.equalHeight('.search-results');
           },
 
         createMenuMobile:function(){
@@ -190,6 +191,9 @@
 
                 $(this).parent().toggleClass('open');
             })
+        },
+        initCart:function(){
+
         }
     }
 
