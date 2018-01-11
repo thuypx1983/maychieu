@@ -513,5 +513,9 @@ body.views--set-products--page-2 .view-set-products .views-row {
 
 .page-search-node .search-results {
   padding: 0px; }
+.page-search-node #search-form {
+  display: none; }
+.page-search-node .page-title {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

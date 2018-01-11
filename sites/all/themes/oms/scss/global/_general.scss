@@ -52,7 +52,7 @@ h1{
       border: 1px solid $color9;
       position: relative;
     }
-    .views-field-sell-price {
+    .views-field-sell-price,.sell-price {
       margin-bottom: 5px;
       margin-top: 5px;
       .uc-price{
@@ -73,12 +73,12 @@ h1{
         font-weight: bold;
       }
     }
-    .views-field-cost{
+    .views-field-cost,.cost{
       color: $color8;
       text-decoration: line-through;
     }
   }
-  .views-field-field-discount{
+  .views-field-field-discount,.field-name-field-discount{
     position: absolute;
     right:10px;
     bottom: 10px;
@@ -92,8 +92,18 @@ h1{
     line-height: 41px;
     font-weight: bold;
   }
+  .field-name-field-discount{
+    .field-item{
+      &::after{
+          content: '%';
+      };
+    }
+  }
 
  }
+.item-list .pager{
+  margin-top: 30px;
+}
 .front-block{
   margin-bottom: 20px;
 }

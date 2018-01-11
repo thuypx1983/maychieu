@@ -3817,13 +3817,13 @@ h1 {
   .product-items .product-item .row-content {
     border: 1px solid #ebebeb;
     position: relative; }
-  .product-items .product-item .views-field-sell-price {
+  .product-items .product-item .views-field-sell-price, .product-items .product-item .sell-price {
     margin-bottom: 5px;
     margin-top: 5px;
     font-weight: bold;
     color: #ff4200;
     font-size: 18px; }
-    .product-items .product-item .views-field-sell-price .uc-price {
+    .product-items .product-item .views-field-sell-price .uc-price, .product-items .product-item .sell-price .uc-price {
       font-weight: bold;
       color: #ff4200;
       font-size: 18px; }
@@ -3834,10 +3834,10 @@ h1 {
       text-align: center;
       padding-top: 20px;
       font-weight: bold; }
-  .product-items .product-item .views-field-cost {
+  .product-items .product-item .views-field-cost, .product-items .product-item .cost {
     color: #b7b7b7;
     text-decoration: line-through; }
-.product-items .views-field-field-discount {
+.product-items .views-field-field-discount, .product-items .field-name-field-discount {
   position: absolute;
   right: 10px;
   bottom: 10px;
@@ -3850,6 +3850,11 @@ h1 {
   color: #fff;
   line-height: 41px;
   font-weight: bold; }
+.product-items .field-name-field-discount .field-item::after {
+  content: '%'; }
+
+.item-list .pager {
+  margin-top: 30px; }
 
 .front-block {
   margin-bottom: 20px; }

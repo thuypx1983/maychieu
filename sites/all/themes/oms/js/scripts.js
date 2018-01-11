@@ -108,7 +108,7 @@
 
         autoHeight:function(){
             STNScript.equalHeight('.product-items .view-content .views-row');
-            STNScript.equalHeight('.search-results');
+            STNScript.equalHeight('.search-results .search-result');
           },
 
         createMenuMobile:function(){

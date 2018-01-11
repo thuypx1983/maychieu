@@ -66,11 +66,55 @@
 ?>
 <li class="<?php print $classes; ?> col-md-3 col-lg-3 col-sm-6 col-xs-6 product-item"<?php print $attributes; ?> >
     <div class="row-content">
-          <?php
-          print render(field_view_field('node', $result['node'], 'uc_product_image', array('label'=>'hidden')));
-          ?>
-          <div class="fields-title">
-            <a href="<?php echo url('node/'.$result['node']->nid)?>"><?php echo $result['node']->title?></a>
+      <?php
+      $field = field_get_items('node', $result['node'], 'uc_product_image');
+      if($field){
+        ?>
+          <div class="views-field views-field-uc-product-image">
+              <div class="field-content">
+                  <a href="<?php echo url('node/'.$result['node']->nid)?>">
+                      <img typeof="foaf:Image" src="<?php echo image_style_url('style_255x255', $field[0]['uri'])?>" alt="" width="255" height="255">
+                  </a>
+              </div>
           </div>
+        <?php
+      }
+
+      ?>
+        <div class="views-field views-field-title">
+            <span class="field-content"><a href="<?php echo url('node/'.$result['node']->nid)?>"><?php echo $result['node']->title?></a></span>
+        </div>
+      <?php
+      if($result['node']->type=='product'){
+        $variant = empty($result['node']->variant) ? _uc_product_get_variant($result['node']) : $result['node'];
+        //print render(field_view_field('node', $result['node'], 'uc_product_cost', array('label'=>'hidden')));
+        $cost=array(
+          '#theme' => 'uc_product_price',
+          '#title' => '',
+          '#value' => $variant->cost,
+          '#attributes' => array(
+            'class' => array(
+              'cost',
+              'uc-product-' . $result['node']->nid,
+            ),
+          ),
+          '#access' => user_access('administer products'),
+        );
+        print render($cost);
+
+        $sell_price=array(
+          '#theme' => 'uc_product_price',
+          '#title' => '',
+          '#value' => $variant->sell_price,
+          '#attributes' => array(
+            'class' => array(
+              'sell-price',
+            ),
+          ),
+        );
+        print render($sell_price);
+        print render(field_view_field('node', $result['node'], 'field_discount', array('label'=>'hidden')));
+      }
+     ?>
     </div>
 </li>
