@@ -4616,25 +4616,37 @@ span.icon-bar {
         height: auto !important; }
         #navigation #main-menu > ul > li a .fa {
           float: right; }
-      #navigation #main-menu > ul > li:hover > ul {
-        display: block; }
+      #navigation #main-menu > ul > li:hover {
+        background-color: #f9f9f9; }
+        #navigation #main-menu > ul > li:hover > ul {
+          display: block; }
       #navigation #main-menu > ul > li > ul {
         background-color: #f9f9f9;
         display: none;
-        width: 00px;
         position: absolute;
         top: 0px;
         min-height: 100%;
-        left: 100%; }
+        left: 100%;
+        width: 250px; }
         #navigation #main-menu > ul > li > ul > li {
           text-align: center; }
           #navigation #main-menu > ul > li > ul > li a {
-            padding-top: 110px;
-            background-size: 100px;
-            text-align: center;
+            text-align: left;
             display: block;
-            padding-left: 0px;
+            padding-left: 20px;
             background-position: top center; }
+      #navigation #main-menu > ul > li.expanded > a {
+        position: relative; }
+        #navigation #main-menu > ul > li.expanded > a:after {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\f105";
+          position: absolute;
+          right: 10px;
+          font-weight: bold; }
       #navigation #main-menu > ul > li.mega > ul {
         width: 400px; }
         #navigation #main-menu > ul > li.mega > ul > li {
@@ -4659,40 +4671,39 @@ span.icon-bar {
     background: transparent !important; }
 
   #navigation #main-menu {
-    background-color: #3eaa3a; }
+    background-color: #f4f4f4; }
 
   #navigation #main-menu > ul > li {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px dotted #b7b7b7;
     display: block;
     width: 100%;
     text-align: left;
     margin-left: 0px;
     position: relative; }
-    #navigation #main-menu > ul > li a {
-      color: #ffffff;
-      display: block; }
+    #navigation #main-menu > ul > li > a {
+      color: #2e2e2e;
+      display: block;
+      text-transform: lowercase;
+      font-weight: bold; }
+      #navigation #main-menu > ul > li > a:first-letter {
+        text-transform: uppercase; }
     #navigation #main-menu > ul > li .fa {
       position: absolute;
       right: 5px;
-      top: 10px;
-      color: #ffffff;
+      top: 2px;
+      color: #2e2e2e;
       padding: 10px; }
     #navigation #main-menu > ul > li > ul {
       position: inherit;
-      background-color: #3eaa3a;
-      width: 100%; }
-    #navigation #main-menu > ul > li.mega > ul {
       width: 100%;
       left: 0px; }
-      #navigation #main-menu > ul > li.mega > ul > li {
-        display: block;
-        width: 100%; }
-        #navigation #main-menu > ul > li.mega > ul > li > a {
-          background-image: none;
-          padding-top: 0px; }
-        #navigation #main-menu > ul > li.mega > ul > li > ul > li > a {
-          background-image: none;
-          padding-top: 0px; }
+      #navigation #main-menu > ul > li > ul li a {
+        color: #2e2e2e;
+        padding-top: 5px;
+        text-align: left;
+        padding-left: 45px; }
+    #navigation #main-menu > ul > li.expanded > a:after {
+      display: none; }
     #navigation #main-menu > ul > li:hover > ul {
       display: none; }
     #navigation #main-menu > ul > li.open > ul {
