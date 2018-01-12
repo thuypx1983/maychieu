@@ -40,14 +40,17 @@
           }
         }
         &:hover{
-          background-color: $color6;
+          background-color: $color9;
           &>ul{
             display: block;
 
           }
         }
         &>ul{
-          background-color: $color6;
+          background-color: $color9;
+          border-right: 1px solid #d8d8d8;
+          border-top: 1px solid #d8d8d8;
+          border-bottom: 1px solid #d8d8d8;
           display: none;
           position: absolute;
           top: 0px;

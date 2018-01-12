@@ -4617,11 +4617,14 @@ span.icon-bar {
         #navigation #main-menu > ul > li a .fa {
           float: right; }
       #navigation #main-menu > ul > li:hover {
-        background-color: #f9f9f9; }
+        background-color: #ebebeb; }
         #navigation #main-menu > ul > li:hover > ul {
           display: block; }
       #navigation #main-menu > ul > li > ul {
-        background-color: #f9f9f9;
+        background-color: #ebebeb;
+        border-right: 1px solid #d8d8d8;
+        border-top: 1px solid #d8d8d8;
+        border-bottom: 1px solid #d8d8d8;
         display: none;
         position: absolute;
         top: 0px;
