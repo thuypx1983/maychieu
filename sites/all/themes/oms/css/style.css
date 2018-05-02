@@ -116,6 +116,9 @@
 .banner-middle {
   margin-top: 30px;
   margin-bottom: 30px; }
+  .banner-middle img {
+    width: 100% !important;
+    height: auto !important; }
 
 body.views--set-products--page-2 .page-title {
   padding: 20px 0; }
@@ -170,6 +173,28 @@ body.views--set-products--page-2 .view-set-products .views-row {
     display: inline-block;
     padding: 5px;
     margin-left: 10px; }
+
+.region-sidebar-first .block {
+  border: 1px solid #ebebeb; }
+.region-sidebar-first .block-facet ul.facetapi-facet-sell-price > li {
+  border-bottom: 1px dashed #ebebeb;
+  padding-bottom: 14px; }
+  .region-sidebar-first .block-facet ul.facetapi-facet-sell-price > li a {
+    font-weight: 500; }
+.region-sidebar-first .block-facet ul.facetapi-facet-taxonomy-catalog li {
+  border-bottom: 1px dashed #ebebeb;
+  padding-bottom: 14px; }
+  .region-sidebar-first .block-facet ul.facetapi-facet-taxonomy-catalog li.expanded {
+    padding: 0px; }
+    .region-sidebar-first .block-facet ul.facetapi-facet-taxonomy-catalog li.expanded > a {
+      padding-left: 10px;
+      font-weight: bold;
+      font-weight: 500;
+      display: block;
+      padding-bottom: 5px; }
+    .region-sidebar-first .block-facet ul.facetapi-facet-taxonomy-catalog li.expanded li a {
+      padding-left: 15px;
+      font-weight: 500; }
 
 .node-type-project .node-project .field-name-field-image .field-item {
   margin-bottom: 30px; }
@@ -367,6 +392,9 @@ body.views--set-products--page-2 .view-set-products .views-row {
   .node-type-product .node-product .field-name-field-discount .field-item:after {
     content: "%"; }
 
+@media only screen and (max-width: 992px) {
+  .node-type-product .node-product .sell-price {
+    margin-top: 15px; } }
 .block-facet {
   margin-top: 10px; }
   .block-facet .title {
@@ -445,6 +473,14 @@ body.views--set-products--page-2 .view-set-products .views-row {
     font-size: 16px;
     font-weight: bold; }
 
+@media only screen and (max-width: 992px) {
+  .region-home-high5-right {
+    padding-left: 0px; }
+    .region-home-high5-right .form-text {
+      max-width: 100%; }
+
+  .region-home-high5-left {
+    padding-right: 0px; } }
 #webform-client-form-44 .webform-component--email {
   position: relative; }
   #webform-client-form-44 .webform-component--email .form-actions {
@@ -455,7 +491,9 @@ body.views--set-products--page-2 .view-set-products .views-row {
     right: 0px; }
 
 .view-news.view-display-id-page .views-row {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 20px;
   display: table;
   width: 100%; }
   .view-news.view-display-id-page .views-row .views-field-title {
@@ -466,3 +504,18 @@ body.views--set-products--page-2 .view-set-products .views-row {
     margin-right: 10px; }
   .view-news.view-display-id-page .views-row .views-field-body {
     color: #717171; }
+
+.menu-news ul.menu li {
+  border-bottom: 1px solid #ebebeb;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold; }
+
+.page-search-node .search-results {
+  padding: 0px; }
+.page-search-node #search-form {
+  display: none; }
+.page-search-node .page-title {
+  display: none; }
+
+/*# sourceMappingURL=style.css.map */

@@ -71,7 +71,9 @@
     ?>
     <div id="main">
         <div class="container">
+            <div id="breadcrumbs"><?php print $breadcrumb; ?></div>
             <div class="row">
+
                 <?php
                 if($page['sidebar_first']){
                     ?>
@@ -83,10 +85,9 @@
                 }
                 ?>
                 <div class="col-md-9 col-lg-9">
-                    <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+
                     <div class="content-header">
-                      <?php if (theme_get_setting('breadcrumbs')): ?><div id="breadcrumbs"><?php if ($breadcrumb): print $breadcrumb; endif;?></div><?php endif; ?>
-                      <?php print $messages; ?>
+                     <?php print $messages; ?>
                       <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
                       <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper clearfix"><?php print render($tabs); ?></div><?php endif; ?>
                       <?php print render($page['help']); ?>

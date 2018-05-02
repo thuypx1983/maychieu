@@ -85,7 +85,7 @@
   line-height: 1.42857;
   padding: 6px 12px;
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
-  width: 100%;
+  max-width: 100%;
 }
 .button-primary{
   border: 1px solid $color3;
@@ -110,6 +110,10 @@
     width: 40px;
     .cart-block-title-bar{
       display: none;
+    }
+    &.block .title{
+      background-color: transparent;
+      margin-bottom: 0px;
     }
   }
   .block-search .content .container-inline .form-actions{

@@ -66,37 +66,66 @@
 ?>
 
 <div id="wrap">
-    <?php
-    include(drupal_get_path('theme', 'oms').'/templates/header.tpl.php');
-    ?>
+  <?php
+  include(drupal_get_path('theme', 'oms').'/templates/header.tpl.php');
+  ?>
     <div id="main">
         <div class="container">
-            <div class="content-header">
-                <?php if (theme_get_setting('breadcrumbs')): ?><div id="breadcrumbs"><?php if ($breadcrumb): print $breadcrumb; endif;?></div><?php endif; ?>
-                <?php print $messages; ?>
-                <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
-                <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper clearfix"><?php print render($tabs); ?></div><?php endif; ?>
-                <?php print render($page['help']); ?>
-                <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-            </div>
-            <section id="post-content" role="main">
-                <?php print render($page['content']); ?>
-            </section>
-        </div>
-        <?php
-        if($page['content_footer']){
-            ?>
-            <div class="content-footer">
-                <div class="container">
-                    <?php print render($page['content_footer']);?>
-                </div>
-            </div>
-            <?php
+            <div id="breadcrumbs"><?php print $breadcrumb; ?></div>
+            <div class="row">
 
-        }?>
+              <?php
+              if($page['sidebar_first']){
+                ?>
+
+                  <div class="col-md-3 col-lg-3">
+                    <?php print render($page['sidebar_first']); ?>
+                  </div>
+                <?php
+              }
+              ?>
+                <div class="col-md-9 col-lg-9">
+
+                    <div class="content-header">
+                      <?php print $messages; ?>
+                      <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
+                      <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper clearfix"><?php print render($tabs); ?></div><?php endif; ?>
+                      <?php print render($page['help']); ?>
+                      <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+                    </div>
+
+                    <div class="page-title">
+                        <h1 class="title"><?php echo $title?></h1>
+                    </div>
+                    <section id="post-content" role="main">
+                      <?php print render($page['content']); ?>
+                    </section>
+                </div>
+              <?php
+              if($page['sidebar_second']){
+                ?>
+                  <div class="col-md-3 col-lg-3">
+                    <?php print render($page['sidebar_second']); ?>
+                  </div>
+                <?php
+              }
+              ?>
+            </div>
+
+        </div>
+      <?php
+      if($page['content_footer']){
+        ?>
+          <div class="content-footer">
+              <div class="container">
+                <?php print render($page['content_footer']);?>
+              </div>
+          </div>
+        <?php
+      }?>
     </div>
 
-    <?php
-    include(drupal_get_path('theme', 'oms').'/templates/footer.tpl.php');
-    ?>
+  <?php
+  include(drupal_get_path('theme', 'oms').'/templates/footer.tpl.php');
+  ?>
 </div>

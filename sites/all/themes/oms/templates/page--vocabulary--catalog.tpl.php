@@ -76,7 +76,6 @@
                     <?php print render($page['sidebar_first']); ?>
                 </div>
                 <div class="col-md-9 col-lg-9">
-                    <div id="breadcrumb"><?php print $breadcrumb; ?></div>
                     <div class="content-header">
                         <?php if (theme_get_setting('breadcrumbs')): ?><div id="breadcrumbs"><?php if ($breadcrumb): print $breadcrumb; endif;?></div><?php endif; ?>
                         <?php print $messages; ?>

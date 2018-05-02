@@ -112,3 +112,11 @@
   }
 
 }
+
+@include bp(max-width,$bp-tablet){
+  .node-type-product .node-product {
+    .sell-price{
+      margin-top: 15px;
+    }
+  }
+}

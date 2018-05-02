@@ -8,6 +8,8 @@
     display: table;
     width: 100%;
     height:50px;
+    margin-bottom: 0px;
+    background-color:#359131 ;
     a{
       display: table-cell;
       text-align: center;
@@ -69,5 +71,154 @@
         }
       }
     }
+  }
+}
+
+#uc-cart-view-form,#uc-cart-checkout-form{
+  .sticky-table{
+    border: 1px solid $color11;
+    thead th{
+      background-color: $color9;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+      border-bottom: none;
+    }
+    tbody tr{
+      background-color: transparent;
+      border-bottom:1px dotted $color9;
+      td{
+        vertical-align: middle;
+        padding:10px 5px;
+        &.remove{
+          input{
+            border: none;
+            padding: 5px;
+            color: $color3;
+          }
+
+        }
+        &.qty{
+          input{
+            width: 35px;
+            padding: 6px;
+            text-align: center;
+          }
+        }
+        &.price{
+          .uc-price{
+            font-weight: bold;
+          }
+        }
+      }
+      .subtotal .uc-price{
+          font-weight: bold;
+        font-size: 18px;
+        color: $color10;
+      }
+    }
+  }
+  input[type=submit]{
+    @include button-style();
+    margin-left: 10px;
+  }
+  select{
+    padding: 5px;
+  }
+}
+#uc-cart-checkout-form{
+  &>div{
+    border: 1px solid $color11;
+    padding: 10px;
+  }
+  fieldset{
+    border: none;
+    padding: 0px;
+    margin-bottom: 30px;
+    margin-left: 0px;
+    legend{
+      width: 100%;
+      span.fieldset-legend{
+        font-weight: bold;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid $color9;
+        display: block;
+        font-size: 15px;
+        text-transform: uppercase;
+
+      }
+    }
+  }
+  #comments-pane{
+    .fieldset-description{
+      display: none;
+    }
+    .form-item-panes-comments-comments label{
+      display: none;
+    }
+  }
+  .form-item-panes-customer-primary-email{
+    label{
+      float: left;
+      padding: 5px 6px 6px;
+      text-align: right;
+      width: 145px;
+    }
+  }
+
+  input{
+    max-width: 100%;
+  }
+}
+.uc-store-address-field .form-item label{
+  width: 145px;
+}
+@include bp(max-width,512px) {
+  #uc-cart-checkout-form {
+    .form-item-panes-customer-primary-email {
+      label {
+        width: 100%;
+        text-align: left;
+        float: none;
+        display: block;
+        width: 100%;
+      }
+      input {
+        width: 100%;
+      }
+    }
+    #billing-pane {
+      label {
+        width: 100%;
+        text-align: left;
+        float: none;
+        display: block;
+        width: 100%;
+      }
+      input {
+        width: 100%;
+      }
+    }
+
+  }
+  #uc-cart-view-form .form-actions a {
+    display: none;
+  }
+  #uc-cart-view-form .sticky-table thead th, #uc-cart-checkout-form .sticky-table thead th {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  #uc-cart-view-form .sticky-table tbody tr td.remove input,
+  #uc-cart-checkout-form .sticky-table tbody tr td.remove input{
+    margin: 0px;
+  }
+  #uc-cart-view-form img{
+    padding-right: 0px;
+    width: 50px;
+  }
+  #uc-cart-view-form .sticky-table thead th, #uc-cart-checkout-form .sticky-table thead th{
+    letter-spacing: -0.5pt;
+    font-size: 12px;
   }
 }

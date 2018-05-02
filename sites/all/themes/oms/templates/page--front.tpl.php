@@ -99,15 +99,9 @@
 
 
     <div class="container product-sales-off home-high3">
-        <div class="title">
-            <span class="text">Sản phẩm bán chạy</span>
-            <a href="#">Xem thêm</a>
-        </div>
-        <div class="row">
-            <?php if ($page['home_high1']): ?>
-                <?php print render($page['home_high1']); ?>
-            <?php endif; ?>
-        </div>
+      <?php if ($page['home_high1']): ?>
+        <?php print render($page['home_high1']); ?>
+      <?php endif; ?>
     </div>
 
 
@@ -119,17 +113,11 @@
   <?php endif; ?>
 
     <div class="container product-sales-off home-high3">
-        <div class="title">
-            <span class="text">Sản phẩm khuyến mại</span>
-            <a href="#">Xem thêm</a>
-        </div>
-        <div class="row">
-            <?php
-            if ($page['home_high3_right']):
-                print render($page['home_high3_right']);
-            endif;
-            ?>
-        </div>
+      <?php
+      if ($page['home_high3_right']):
+        print render($page['home_high3_right']);
+      endif;
+      ?>
     </div>
 
   <?php if ($page['banner_home_2']): ?>
@@ -139,17 +127,11 @@
   <?php endif; ?>
 
     <div class="container product-sales-off home-high4">
-        <div class="title">
-            <span class="text">Sản phẩm Mới</span>
-            <a href="#">Xem thêm</a>
-        </div>
-        <div class="row">
-            <?php
-            if ($page['home_high4_left']):
-                print render($page['home_high4_left']);
-            endif;
-            ?>
-        </div>
+      <?php
+      if ($page['home_high4_left']):
+        print render($page['home_high4_left']);
+      endif;
+      ?>
     </div>
 
     <div class="container home-high5">

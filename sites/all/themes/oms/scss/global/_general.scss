@@ -26,6 +26,15 @@ h1{
   font-weight: normal;
   font-size: 22px;
 }
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .row-content{
   height: 100%;
   padding: 10px 5px;
@@ -41,8 +50,9 @@ h1{
     margin-bottom: 10px;
     .row-content{
       border: 1px solid $color9;
+      position: relative;
     }
-    .views-field-sell-price {
+    .views-field-sell-price,.sell-price {
       margin-bottom: 5px;
       margin-top: 5px;
       .uc-price{
@@ -63,12 +73,12 @@ h1{
         font-weight: bold;
       }
     }
-    .views-field-cost{
+    .views-field-cost,.cost{
       color: $color8;
       text-decoration: line-through;
     }
   }
-  .views-field-field-discount{
+  .views-field-field-discount,.field-name-field-discount{
     position: absolute;
     right:10px;
     bottom: 10px;
@@ -82,8 +92,137 @@ h1{
     line-height: 41px;
     font-weight: bold;
   }
+  .field-name-field-discount{
+    .field-item{
+      &::after{
+          content: '%';
+      };
+    }
+  }
 
  }
+.item-list .pager{
+  margin-top: 30px;
+}
 .front-block{
   margin-bottom: 20px;
+}
+
+.block{
+  position: relative;
+  .title{
+    background-color: #ebebeb;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+.block-views{
+  .view-header{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    p,ul{
+      display: inline-block;
+    }
+    ul{
+      padding-left: 10px;
+      margin: 0px;
+      li{
+        list-style: none;
+        display: inline-block;
+        padding: 10px 0px;
+        a{
+          display: inline-block;
+          border-right: 1px solid $color3;
+          padding-left: 5px;
+          padding-right: 5px;
+          font-weight: bold;
+        }
+        &:last-child{
+          a{
+            border-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include bp(max-width,$bp-tablet){
+  .block-views{
+    .view-header{
+      .header-content{
+        position: relative;
+        span{
+          padding: 10px 10px;
+          display: inline-block;
+          font-weight: bold;
+        }
+        ul{
+          display: none;
+          position: absolute;
+          top:100%;
+          right: 0px;
+          border-left: 1px solid $color2;
+          border-right: 1px solid $color2;
+          border-bottom: 1px solid $color2;
+          background-color: $color2;
+          z-index: 1;
+        }
+      }
+      &:hover{
+        span{
+          background-color: $color2;
+        }
+        ul{
+          display: block;
+          li{
+            a{
+              border-right: none;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .product-items{
+    .product-item{
+      margin-bottom: 10px;
+
+      .views-field-sell-price {
+        .uc-price{
+          font-size: 15px;
+        }
+        font-weight: bold;
+        color: #ff4200;
+        font-size: 15px;
+      }
+      .views-field-title{
+        margin-bottom: 10px;
+        a,h3{
+          font-size: 13px;
+        }
+      }
+    }
+    .views-field-field-discount{
+      position: absolute;
+      right:10px;
+      bottom: 10px;
+      float: right;
+      margin-top: 10px;
+      width: 41px;
+      height: 41px;
+      text-align: center;
+      background: url("/sites/all/themes/oms/images/icon.png") no-repeat scroll -241px -45px transparent;
+      color: #fff;
+      line-height: 41px;
+      font-weight: bold;
+    }
+
+  }
 }

@@ -6,7 +6,6 @@ stylesheets[all][] = css/style.css
 stylesheets[all][] = js/pushy/css/pushy.css
 stylesheets[all][] = js/magnific-popup/magnific-popup.css
 scripts[] = js/magnific-popup/jquery.magnific-popup.js
-scripts[] = /sites/default/files/css/menu_icons.css
 scripts[] = js/slick.min.js
 scripts[] = js/overwrites.js
 scripts[] = js/scripts.js
