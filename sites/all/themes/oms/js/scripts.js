@@ -38,16 +38,21 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 arrows: true,
-                dots:true
+                dots:true,
+                nextArrow: '<div class="arrow arrow-right"><img src="/sites/all/themes/oms/images/arrowRight.png"></div>',
+                prevArrow: '<div class="arrow arrow-left"><img src="sites/all/themes/oms/images/arrowLeft.png"></div>',
             })
             $('.block-featured-product .view-content').slick({
                 autoplay: false,
+                autoplaySpeed: 3500,
                 arrows: true,
                 dots:false,
                 infinite: true,
                 slidesToShow: 5,
                 slidesToScroll: 5,
                 dots:false,
+                nextArrow: '<div class="arrow arrow-right"><img src="/sites/all/themes/oms/images/arrowRight.png"></div>',
+                prevArrow: '<div class="arrow arrow-left"><img src="sites/all/themes/oms/images/arrowLeft.png"></div>',
                 responsive: [
                     {
                         breakpoint: 1024,
