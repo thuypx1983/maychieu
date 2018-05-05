@@ -13,20 +13,23 @@
       font-size: 14px;
     }
   }
-  .slick-prev {
-    left: 0px;
-    z-index: 1;
-    &:before{
-      color: $color1;
-      font-size: 30px;
+}
+
+.slick-slider{
+  .arrow{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    z-index: 2;
+    width: 65px;
+    &:hover{
+      background-color: rgba(0,0,0,0.1);
     }
   }
-  .slick-next {
+  .arrow-right{
     right: 0px;
-    z-index: 1;
-    &:before{
-      color: $color1;
-      font-size: 30px;
-    }
+  }
+  .arrow-left{
+    left: 0px;
   }
 }

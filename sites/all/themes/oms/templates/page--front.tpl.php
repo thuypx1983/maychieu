@@ -97,42 +97,38 @@
         </div>
     </div>
 
-
-    <div class="container product-sales-off home-high3">
-      <?php if ($page['home_high1']): ?>
-        <?php print render($page['home_high1']); ?>
+      <?php if ($page['home_block_1']): ?>
+        <div class="container product-sales-off home-high3">
+            <?php print render($page['home_block_1']); ?>
+        </div>
       <?php endif; ?>
-    </div>
+    <?php if ($page['home_block_2']): ?>
+        <div class="container product-sales-off home-high3">
+            <?php print render($page['home_block_2']); ?>
+        </div>
+    <?php endif; ?>
+    <?php if ($page['home_block_3']): ?>
+        <div class="container product-sales-off home-high3">
+            <?php print render($page['home_block_3']); ?>
+        </div>
+    <?php endif; ?>
+    <?php if ($page['home_block_4']): ?>
+        <div class="container product-sales-off home-high3">
+            <?php print render($page['home_block_4']); ?>
+        </div>
+    <?php endif; ?>
+    <?php if ($page['home_block_5']): ?>
+        <div class="container product-sales-off home-high3">
+            <?php print render($page['home_block_5']); ?>
+        </div>
+    <?php endif; ?>
+    <?php if ($page['home_block_6']): ?>
+        <div class="container product-sales-off home-high3">
+            <?php print render($page['home_block_6']); ?>
+        </div>
+    <?php endif; ?>
 
 
-
-  <?php if ($page['banner_home_1']): ?>
-      <div class="container">
-        <?php print render($page['banner_home_1']); ?>
-      </div>
-  <?php endif; ?>
-
-    <div class="container product-sales-off home-high3">
-      <?php
-      if ($page['home_high3_right']):
-        print render($page['home_high3_right']);
-      endif;
-      ?>
-    </div>
-
-  <?php if ($page['banner_home_2']): ?>
-      <div class="container">
-        <?php print render($page['banner_home_2']); ?>
-      </div>
-  <?php endif; ?>
-
-    <div class="container product-sales-off home-high4">
-      <?php
-      if ($page['home_high4_left']):
-        print render($page['home_high4_left']);
-      endif;
-      ?>
-    </div>
 
     <div class="container home-high5">
         <div class="row">
@@ -155,9 +151,9 @@
         </div>
     </div>
 
-    <?php if ($page['home_high2']): ?>
+    <?php if ($page['home_high7']): ?>
         <div class="container">
-            <?php print render($page['home_high2']); ?>
+            <?php print render($page['home_high7']); ?>
         </div>
     <?php endif; ?>
 

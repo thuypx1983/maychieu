@@ -86,8 +86,15 @@
                     </div>
 
                     <div class="page-title">
-                        <div class="container">
-                            <h1 class="title"><?php echo $title?></h1>
+                        <h1 class="title"><?php echo $title?></h1>
+                        <div class="description">
+                            <?php
+                            $termid = arg(2);
+                            $term = taxonomy_term_load($termid);
+                            if ($term ){
+                                echo $term->description;
+                            }
+                            ?>
                         </div>
                     </div>
                     <section id="post-content" role="main">
